@@ -95,7 +95,7 @@
     opacity:0.15
 }
 
-.videotitle /*style for the title of the video*/
+.thumbnailtitle /*style for the title of the video*/
 {
     margin-top:12px;
     margin-left:8px;
@@ -126,6 +126,22 @@
 {
     margin:16px;
     position:absolute;
+}
+
+.videotitle
+{
+    color:#d1d1d1;
+}
+
+.videoviews
+{
+    color:#696969;
+    font-size:smaller;
+}
+
+.videoviews:hover
+{
+    color:#808080;
 }
 
 .navlink /*formatting for links in the sidebar*/
