@@ -13,4 +13,24 @@ Some of these include:
 
 ### How to get involved
 
-Join the Vortex Development Discord at [link pending] and send a message in the #applications channel with your qualifications, why you want to help out, etc. If I think you're a good fit, I'll add you to the team.
+Join the Vortex Development Discord at [link pending] and send a message in the #applications channel with your qualifications, why you want to help out, etc. If I think you're a good fit, I'll add you to the team.   
+Currently I have no funding for this, but if I can get enough support hopefully I'll be able to turn this into a real company and start hiring actual developers, maybe even some of you guys if you're up for that.   
+
+We currently need (in order of importance):
+
+ - HTML/CSS developers
+ - Javascript developers
+ - developers who can do something relating to websites and video hosting and such, I dont know exactly what's best but if you do then let me know.
+ - Someone who can handle server stuff so we can actually make this a website
+ - Someone who knows how to use databases (SQL/SQLite? I've never used databases before)
+ - Art Designers
+
+---
+
+### Who am I?
+
+I'm currently taking college classes in various different programming languages, including HTML/CSS. I'm sick of Youtube getting away with everything because they're the only good video platform, so I wanna change that.   
+
+Obviously I'm pretty underqualified for something of this scale at the moment, but I'm trying to learn as fast as I can. Obviously most of my code is gonna be super inefficient and garbage since I literally started HTML/CSS/JS last week, so if you see anything like that just let me know and give me a way to fix it and I'll make it better.   
+
+If you want an idea of what my work looks like, just check out some of the other stuff I've uploaded to github.
