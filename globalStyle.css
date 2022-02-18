@@ -2,13 +2,14 @@
 {
     font-family:Arial, Helvetica, sans-serif;
     margin:0px;
-    background-color:rgb(48, 48, 48);
+    background-color:#303030;
     color:white;
 }
 
 .body /*an extra margin so the main body of the page doesn't get sucked up by the sidebar*/
 {
     margin-left:256px !important;
+    margin-top:32px;
 }
 
 .sticky /*the sticky header*/
@@ -17,7 +18,7 @@
     position:sticky;
     top:0;
     z-index:2;
-    background-color:rgb(32, 32, 32);
+    background-color:#202020;
 }
 
 .inline /*anything inline with other items, eg. the logo and searchbar*/
@@ -34,10 +35,10 @@
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    background-color:rgb(64, 64, 64);
+    background-color:#404040;
     border-width:8px;
     border-style:solid;
-    border-color:rgb(64, 64, 64);
+    border-color:#404040;
     border-radius:4px;
     color:white;
 }
@@ -56,7 +57,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(40, 40, 40);
+    background-color: #282828;
     overflow-x: hidden;
     padding-top: 128px;
     padding-left:16px;
@@ -74,30 +75,81 @@
     font-size:larger;
 }
 
-a:link /*make standard links vortex purple, #6900d9*/
+.thumbnail
+{
+    z-index:1;
+    padding:16px;
+    background-color:#282828;
+}
+
+.thumbnailfade
+{
+    z-index:2;
+    width:384;
+    height:216;
+    opacity:0;
+    background:linear-gradient(45deg,#4000ff, #6900d9);
+    position:absolute;
+    transition:opacity 0.2s ease-in-out;
+}
+
+.thumbnailfade:hover
+{
+    opacity:0.15
+}
+
+.videotitle
+{
+    margin-top:12px;
+    margin-left:8px;
+    font-size:larger;
+    position:absolute;
+}
+
+.videotable
+{
+    border-spacing:32px;
+}
+
+.creatoricon
+{
+    margin-top:4px;
+}
+
+a:link /*make standard links vortex purple*/
 {
     color: #6900d9;
     background-color: transparent;
     text-decoration: none;
 }
   
-a:visited /*make visited links vortex purple, #6900d9*/
+a:visited /*make visited links vortex purple*/
 {
     color: #6900d9;
     background-color: transparent;
     text-decoration: none;
 }
   
-a:hover /*make hovered links vortex blue, #4000ff*/
+a:hover /*make hovered links vortex blue*/
 {
     color: #4000ff;
     background-color: transparent;
     text-decoration: underline;
 }
   
-a:active /*make active links vortex steel, #d1d1d1*/
+a:active /*make active links vortex silver*/
 {
     color: #d1d1d1;
     background-color: transparent;
     text-decoration: underline;
 }
+
+/*
+Vortex Colors:
+Vortex Purple: #6900d9
+Vortex Blue: #4000ff
+Vortex Titanium: #d1d1d1
+Vortex Steel: #303030
+Vortex Steel Dark: #202020
+Vortex Silver: #404040
+*/
