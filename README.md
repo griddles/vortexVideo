@@ -31,6 +31,8 @@ We currently need (in order of importance):
 
 I'm currently taking college classes in various different programming languages, including HTML/CSS. I'm sick of Youtube getting away with everything because they're the only good video platform, so I wanna change that.   
 
-Obviously I'm pretty underqualified for something of this scale at the moment, but I'm trying to learn as fast as I can. Obviously most of my code is gonna be super inefficient and garbage since I literally started HTML/CSS/JS last week, so if you see anything like that just let me know and give me a way to fix it and I'll make it better.   
+Obviously I'm pretty underqualified for something of this scale at the moment, but I'm trying to learn as fast as I can. Most of my code is gonna be super inefficient and garbage since I literally started HTML/CSS/JS last week, so if you see anything like that just let me know and give me a way to fix it and I'll make it better.   
+
+Also, as a bunch of different people I've met have said, "An employer is hiring you to do something better than they can." It's a little different since I wouldn't be exactly hiring you, but you get the point. You'll probably be way better than me at whatever you join the team to do, which is why I want you to join the team.   
 
 If you want an idea of what my work looks like, just check out some of the other stuff I've uploaded to github.
