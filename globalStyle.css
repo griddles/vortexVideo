@@ -1,0 +1,103 @@
+.default /*standard font/colors*/
+{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px;
+    background-color:rgb(48, 48, 48);
+    color:white;
+}
+
+.body /*an extra margin so the main body of the page doesn't get sucked up by the sidebar*/
+{
+    margin-left:256px !important;
+}
+
+.sticky /*the sticky header*/
+{
+    position:-webkit-sticky;
+    position:sticky;
+    top:0;
+    z-index:2;
+    background-color:rgb(32, 32, 32);
+}
+
+.inline /*anything inline with other items, eg. the logo and searchbar*/
+{
+    display:inline-block;
+}
+
+.searchbar /*the actual searchbar formatting*/
+{
+    margin-left:12%;
+    width:50%;
+    font-size:x-large;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color:rgb(64, 64, 64);
+    border-width:8px;
+    border-style:solid;
+    border-color:rgb(64, 64, 64);
+    border-radius:4px;
+    color:white;
+}
+
+.searchbar:focus /*make sure the searchbar doesn't change when someone types in it*/
+{
+    border-width:8px;
+    outline:none;
+}
+
+.sidebar /*formatting for the sidebar*/
+{
+    height: 100%;
+    width: 192px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(40, 40, 40);
+    overflow-x: hidden;
+    padding-top: 128px;
+    padding-left:16px;
+    font-size:x-large;
+}
+
+.sidebarlink
+{
+    margin-top:8px;
+}
+
+.bodytext
+{
+    padding-right:31%;
+    font-size:larger;
+}
+
+a:link /*make standard links vortex purple, #6900d9*/
+{
+    color: #6900d9;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:visited /*make visited links vortex purple, #6900d9*/
+{
+    color: #6900d9;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:hover /*make hovered links vortex blue, #4000ff*/
+{
+    color: #4000ff;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  
+a:active /*make active links vortex steel, #d1d1d1*/
+{
+    color: #d1d1d1;
+    background-color: transparent;
+    text-decoration: underline;
+}
