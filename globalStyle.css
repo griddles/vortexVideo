@@ -64,25 +64,25 @@
     font-size:x-large;
 }
 
-.sidebarlink
+.sidebarlink /*formatting for links in the sidebar*/
 {
     margin-top:8px;
 }
 
-.bodytext
+.bodytext /*formatting for text in the body of the page*/
 {
     padding-right:31%;
     font-size:larger;
 }
 
-.thumbnail
+.thumbnail /*formatting for the thumbnail images*/
 {
     z-index:1;
     padding:16px;
     background-color:#282828;
 }
 
-.thumbnailfade
+.thumbnailfade /*handling the thumbnail gradient fade effect*/
 {
     z-index:2;
     width:384;
@@ -93,12 +93,12 @@
     transition:opacity 0.2s ease-in-out;
 }
 
-.thumbnailfade:hover
+.thumbnailfade:hover /*the desired opacity for the thumbnail fade*/
 {
     opacity:0.15
 }
 
-.videotitle
+.videotitle /*style for the title of the video*/
 {
     margin-top:12px;
     margin-left:8px;
@@ -106,12 +106,12 @@
     position:absolute;
 }
 
-.videotable
+.videotable /*spacing for the hidden table that organizes videos*/
 {
     border-spacing:32px;
 }
 
-.creatoricon
+.creatoricon /*margins for the creator's icon in the thumbnail*/
 {
     margin-top:4px;
 }
