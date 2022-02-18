@@ -13,7 +13,7 @@ Some of these include:
 
 ### How to get involved
 
-Join the Vortex Development Discord at [link pending] and send a message in the #applications channel with your qualifications, why you want to help out, etc. If I think you're a good fit, I'll add you to the team.   
+Join the Vortex Development Discord at https://discord.gg/5zWxzwAukj and send a message in the #applications channel with your qualifications, why you want to help out, etc. If I think you're a good fit, I'll add you to the team.   
 Currently I have no funding for this, but if I can get enough support hopefully I'll be able to turn this into a real company and start hiring actual developers, maybe even some of you guys if you're up for that.   
 
 We currently need (in order of importance):
