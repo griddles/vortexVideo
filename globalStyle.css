@@ -92,9 +92,10 @@
     background:linear-gradient(45deg,#4000ff, #6900d9);
     position:absolute;
     transition:opacity 0.2s ease-in-out;
+    pointer-events:none;
 }
 
-.thumbnailfade:hover /*the desired opacity for the thumbnail fade*/
+.thumbnail:hover > .thumbnailfade /*the desired opacity for the thumbnail fade*/
 {
     opacity:0.15
 }
@@ -115,6 +116,21 @@
 .creatoricon /*margins for the creator's icon in the thumbnail*/
 {
     margin-top:4px;
+}
+
+.video /*styling for the actual video box*/
+{
+    margin:16px;
+    padding:32px;
+    background-color:#282828;
+    width:90%;
+    height:60%;
+}
+
+.videodetails
+{
+    margin:16px;
+    position:absolute;
 }
 
 a:link /*make standard links vortex purple*/
