@@ -6,19 +6,19 @@
     <title>Vortex - Home</title>
     <body class="default">
         <div class="sticky">
-            <a href="index.html" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="256"></a>
+            <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="256"></a>
             <form class="inline">
                 <input class="searchbar" placeholder="Search">
             </form>
         </div>
         <div class="sidebar">
-            <div class="navlink"><a href="index.html">Home</a></div>
+            <div class="navlink"><a href="index.php">Home</a></div>
             <div class="navlink"><a href="about.html">About Us</a></div>
         </div>
         <div class="body">
             <div class="inline thumbnail">
                 <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
+                <a href="video.php"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
                 <div>
                     <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
                     <p class="inline thumbnailtitle">Title Placeholder Text</p>
