@@ -17,38 +17,38 @@
         </div>
         <?php
         include 'db_connection.php';
-        $conn = OpenCon();
-        // add database code here
-        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails";
+        $conn = OpenCon(); // connect to the database
+        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails"; // yoink the desired values
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
+            $row = mysqli_fetch_row($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
         ?>
         <div class="body">
             <div class="inline thumbnail">
                 <div class="thumbnailfade"></div>
-                <a href="video.php"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
+                <a href="video.php?0"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
                 <div>
                     <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">
+                    <div class="inline thumbnailtitle" title="<?php echo $row[0]; ?>" style="width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
                         <?php
-                            $row = mysqli_fetch_row($result);
-                            echo $row[0];
+                            echo $row[0]; // grab the current video title
+                            $row = mysqli_fetch_row($result); // move on to the next video entry
                         ?>
-                    </p>
+                    </div>
                 </div>
             </div>
             <div class="inline thumbnail">
                 <div class="thumbnailfade"></div>
-                <a href="video.php"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
+                <a href="video.php?1"><!-- using 0, 1, 2, etc. as links for the videos is super dangerous, this needs to be changed to some random base 72 string or something --><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
                 <div>
                     <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">
+                    <div class="inline thumbnailtitle" title="<?php echo $row[0]; ?>" style="width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
                         <?php
-                            $row = mysqli_fetch_row($result);
                             echo $row[0];
+                            $row = mysqli_fetch_row($result);
                         ?>
-                    </p>
+                    </div>
                 </div>
             </div>
             <?php

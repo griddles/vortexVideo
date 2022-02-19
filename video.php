@@ -20,35 +20,35 @@
                 <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
                 <div class="inline videodetails">
                     <?php
-                        include 'db_connection.php';
+                        include 'db_connection.php'; // connect to the database
                         $conn = OpenCon();
-                        // add database code here
-                        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails";
+                        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails"; // yoink the desired values from the database
                         $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            $row = mysqli_fetch_row($result);
+                        
+                        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
+ 
+                        $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // strip it for the query stuff
+                        $video_num = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
+                        
+                        $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
                     ?>
                     <h2 class="videotitle">
                         <?php
-                            echo $row[0];
+                            echo $database[$video_num][0]; // grab the video details depending on which video this is
                         ?>
                     </h2>
                     <b><p class="videocreator">
                         <?php
-                            echo $row[1]
+                            echo $database[$video_num][1]; // same
                         ?>
                     </p></b>
                     <p class="videoviews">
                         <?php
-                            echo $row[2];
+                            echo $database[$video_num][2]; // etc.
                         ?>
                         views
                     </p>
                     <?php
-                        } else {
-                        echo "0 results";
-                        }
                         CloseCon($conn);
                     ?>
                 </div>
