@@ -13,14 +13,12 @@
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="index.php">Home</a></div>
-            <div class="navlink"><a href="about.html">About Us</a></div>
+            <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
             <div class="video">
                 <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
                 <div class="inline videodetails">
-                    <!--<h2 class="videotitle">Title Placeholder Text</h2>
-                    <p class="videoviews">187k views</p>-->
                     <?php
                         include 'db_connection.php';
                         $conn = OpenCon();
@@ -29,10 +27,10 @@
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
+                            $row = mysqli_fetch_row($result);
                     ?>
                     <h2 class="videotitle">
                         <?php
-                            $row = mysqli_fetch_row($result);
                             echo $row[0];
                         ?>
                     </h2>

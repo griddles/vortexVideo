@@ -13,7 +13,7 @@
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="index.php">Home</a></div>
-            <div class="navlink"><a href="about.html">About Us</a></div>
+            <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
             <h1>Who we are</h1>

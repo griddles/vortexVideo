@@ -13,89 +13,51 @@
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="index.php">Home</a></div>
-            <div class="navlink"><a href="about.html">About Us</a></div>
+            <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
+        <?php
+        include 'db_connection.php';
+        $conn = OpenCon();
+        // add database code here
+        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+        ?>
         <div class="body">
             <div class="inline thumbnail">
                 <div class="thumbnailfade"></div>
                 <a href="video.php"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
                 <div>
                     <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
+                    <p class="inline thumbnailtitle">
+                        <?php
+                            $row = mysqli_fetch_row($result);
+                            echo $row[0];
+                        ?>
+                    </p>
                 </div>
             </div>
             <div class="inline thumbnail">
                 <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
+                <a href="video.php"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
                 <div>
                     <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
+                    <p class="inline thumbnailtitle">
+                        <?php
+                            $row = mysqli_fetch_row($result);
+                            echo $row[0];
+                        ?>
+                    </p>
                 </div>
             </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.html"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <p class="inline thumbnailtitle">Title Placeholder Text</p>
-                </div>
-            </div>
+            <?php
+        }
+        else {
+            echo "0 results";
+            }
+            CloseCon($conn);
+            ?>
         </div>
     </body>
 </html>
