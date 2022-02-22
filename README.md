@@ -7,7 +7,7 @@ Some of these include:
  - A non intrusive algorithm   
  - Much more power given to creators over things like ads   
  - A much looser content guideline system that still blocks actually harmful content, not "guns with magazines of over 10 rounds" like Youtube   
- - A system in which all users are notified of changes at least a week before they release, and creators are given a vote on whether the change should be kept, modified, or discarded, both before and after the change is released.   
+ - A system in which all users are notified of changes at least a week before they release, and creators are given a vote on whether the change should be kept, modified, or discarded, both before and after the change is released. Obviously this wouldn't apply to some changes, like stuff having to do with the backend stuff or other very important changes.    
 
 ---
 
@@ -18,8 +18,7 @@ Currently I have no funding for this, but if I can get enough support hopefully 
 
 We currently need (in order of importance):
 
- - HTML/CSS developers
- - Javascript developers
+ - HTML/CSS/PHP/JS devs, to make the core of the website
  - developers who can do something relating to websites and video hosting and such, I dont know exactly what's best but if you do then let me know.
  - Someone who can handle server stuff so we can actually make this a website
  - Someone who knows how to use databases (SQL/SQLite? I've never used databases before)
@@ -31,7 +30,7 @@ We currently need (in order of importance):
 
 I'm currently taking college classes in various different programming languages, including HTML/CSS. I'm sick of Youtube getting away with everything because they're the only good video platform, so I wanna change that.   
 
-Obviously I'm pretty underqualified for something of this scale at the moment, but I'm trying to learn as fast as I can. Most of my code is gonna be super inefficient and garbage since I literally started HTML/CSS/JS last week, so if you see anything like that just let me know and give me a way to fix it and I'll make it better.   
+Obviously I'm pretty underqualified for something of this scale at the moment, but I'm trying to learn as fast as I can. Most of my code is gonna be super inefficient and garbage since I literally started HTML/CSS/PHP/JS last week, so if you see anything problematic just let me know and give me a way to fix it and I'll make it better.   
 
 Also, as a bunch of different people I've met have said, "An employer is hiring you to do something better than they can." It's a little different since I wouldn't be exactly hiring you, but you get the point. You'll probably be way better than me at whatever you join the team to do, which is why I want you to join the team.   
 
