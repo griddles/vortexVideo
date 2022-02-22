@@ -3,7 +3,22 @@
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
     </head>
-    <title>Vortex - [video title]</title>
+    <?php
+        include 'db_connection.php'; // connect to the database
+        $conn = OpenCon();
+        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails"; // yoink the desired values from the database
+        $result = $conn->query($sql);
+        
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
+ 
+        $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // strip it for the query stuff
+        $video_num = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
+        
+        $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
+    ?>
+    <title>Vortex - <?php
+        echo $database[$video_num][0];
+    ?></title>
     <body class="default">
         <div class="sticky">
             <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="256"></a>
@@ -19,19 +34,6 @@
             <div class="video">
                 <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
                 <div class="inline videodetails">
-                    <?php
-                        include 'db_connection.php'; // connect to the database
-                        $conn = OpenCon();
-                        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails"; // yoink the desired values from the database
-                        $result = $conn->query($sql);
-                        
-                        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
- 
-                        $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // strip it for the query stuff
-                        $video_num = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
-                        
-                        $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
-                    ?>
                     <h2 class="videotitle">
                         <?php
                             echo $database[$video_num][0]; // grab the video details depending on which video this is
