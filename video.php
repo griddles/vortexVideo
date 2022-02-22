@@ -6,7 +6,7 @@
     <?php
         include 'db_connection.php'; // connect to the database
         $conn = OpenCon();
-        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails"; // yoink the desired values from the database
+        $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values from the database
         $result = $conn->query($sql);
         
         $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
@@ -21,7 +21,7 @@
     ?></title>
     <body class="default">
         <div class="sticky">
-            <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="256"></a>
+        <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="16%"></a>
             <form class="inline">
                 <input class="searchbar" placeholder="Search">
             </form>
@@ -32,7 +32,10 @@
         </div>
         <div class="body">
             <div class="video">
-                <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
+                <video height="100%" controls="true">
+                    <source src="videos/<?php echo $database[$video_num][3]; ?>" type="video/mp4">
+                    <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
+                </video>
                 <div class="inline videodetails">
                     <h2 class="videotitle">
                         <?php
