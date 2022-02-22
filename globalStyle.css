@@ -155,30 +155,30 @@
     margin-top:8px;
 }
 
-a:link /*make standard links vortex purple*/
+a:link /*make standard links vortex titanium*/
 {
-    color: #6900d9;
+    color: #d1d1d1;
     background-color: transparent;
-    text-decoration: none;
+    text-decoration: underline;
 }
-  
-a:visited /*make visited links vortex purple*/
+
+a:visited /*make visited links vortex titanium*/
 {
-    color: #6900d9;
-    background-color: transparent;
-    text-decoration: none;
-}
-  
-a:hover /*make hovered links vortex blue*/
-{
-    color: #4000ff;
+    color: #d1d1d1;
     background-color: transparent;
     text-decoration: underline;
 }
   
-a:active /*make active links vortex titanium*/
+a:hover /*make hovered links vortex purple*/
 {
-    color: #d1d1d1;
+    color: #6900d9;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  
+a:active /*make active links vortex blue*/
+{
+    color: #4000ff;
     background-color: transparent;
     text-decoration: underline;
 }
