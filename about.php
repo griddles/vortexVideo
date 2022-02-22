@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
     </head>
-    <title>Vortex - Home</title>
+    <title>Vortex - About Us</title>
     <body class="default">
         <div class="sticky">
             <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="16%"></a>
