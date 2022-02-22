@@ -15,16 +15,16 @@
             <div class="navlink"><a href="index.php">Home</a></div>
             <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
-        <?php
-        include 'db_connection.php';
-        $conn = OpenCon(); // connect to the database
-        $sql = "SELECT Title, Creator, Views FROM vortexvideodetails"; // yoink the desired values
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            $row = mysqli_fetch_row($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
-        ?>
         <div class="body">
+            <?php
+            include 'db_connection.php';
+            $conn = OpenCon(); // connect to the database
+            $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                $row = mysqli_fetch_row($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
+            ?>
             <div class="inline thumbnail">
                 <div class="thumbnailfade"></div>
                 <a href="video.php?0"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
