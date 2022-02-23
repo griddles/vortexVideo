@@ -23,7 +23,7 @@
             $result = $conn->query($sql);
             $database = mysqli_fetch_all($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
             $i = 0;
-            while ($i < count($database)){
+            while ($i < count($database)){ // dynamic thumbnails
                 echo "
                 <div class='inline thumbnail'>
                 <div class='thumbnailfade'></div>
