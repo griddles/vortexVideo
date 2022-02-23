@@ -6,10 +6,10 @@
     <?php
         include 'db_connection.php'; // connect to the database
         $conn = OpenCon();
-        $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
+        $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values from the database
         $result = $conn->query($sql);
         
-        $key = "SELECT videokey FROM vortexvideos";
+        $key = "SELECT videokey FROM vortexvideos"; // get a list of video keys seperate from the rest of the values
         $keyresult = $conn->query($key);
 
         $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
@@ -19,10 +19,10 @@
 
         $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
 
-        $keys = mysqli_fetch_all($keyresult);
-        $video_num = null;
+        $keys = mysqli_fetch_all($keyresult); // grab all the keys from the database
+        $video_num = null; // set up some variables for the foreach loop
         $i = 0;
-        foreach ($keys as $key)
+        foreach ($keys as $key) // check all the video keys to see if they match the one in the url
         {
             if ($key[0] == $video_key)
             {
