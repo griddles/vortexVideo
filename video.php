@@ -9,13 +9,27 @@
         $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
         $result = $conn->query($sql);
         
+        $key = "SELECT videokey FROM vortexvideos";
+        $keyresult = $conn->query($key);
+
         $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
  
         $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // strip it for the query stuff
         $video_key = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
 
         $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
-        
+
+        $keys = mysqli_fetch_all($keyresult);
+        $video_num = null;
+        $i = 0;
+        foreach ($keys as $key)
+        {
+            if ($key[0] == $video_key)
+            {
+                $video_num = $i;
+            }
+            $i += 1;
+        }
     ?>
     <title>Vortex - <?php
         echo $database[$video_num][0];
