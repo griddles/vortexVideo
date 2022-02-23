@@ -21,7 +21,7 @@
     ?></title>
     <body class="default">
         <div class="sticky">
-        <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="16%"></a>
+        <a href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="240px"></a>
             <form class="inline">
                 <input class="searchbar" placeholder="Search">
             </form>
@@ -33,7 +33,7 @@
         <div class="body">
             <div class="video">
                 <video height="100%" controls="true">
-                    <source src="videos/<?php echo $database[$video_num][3]; ?>" type="video/mp4">
+                    <source src="videos/<?php echo $database[$video_num][3]; ?>">
                     <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
                 </video>
                 <div class="inline videodetails">
