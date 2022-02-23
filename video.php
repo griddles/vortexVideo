@@ -6,15 +6,16 @@
     <?php
         include 'db_connection.php'; // connect to the database
         $conn = OpenCon();
-        $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values from the database
+        $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
         $result = $conn->query($sql);
         
         $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
  
         $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // strip it for the query stuff
-        $video_num = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
-        
+        $video_key = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
+
         $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
+        
     ?>
     <title>Vortex - <?php
         echo $database[$video_num][0];

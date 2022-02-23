@@ -19,7 +19,7 @@
             <?php
             include 'db_connection.php';
             $conn = OpenCon(); // connect to the database
-            $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values
+            $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values
             $result = $conn->query($sql);
             $database = mysqli_fetch_all($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
             $i = 0;
@@ -27,7 +27,7 @@
                 echo "
                 <div class='inline thumbnail'>
                 <div class='thumbnailfade'></div>
-                <a href='video.php?" . $i . "'><img src='images/thumbnailPlaceholder.png' width='384' height='auto'></a>
+                <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='384' height='auto'></a>
                 <div>
                     <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
                     <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;'>"
