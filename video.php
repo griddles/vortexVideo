@@ -26,10 +26,24 @@
         {
             if ($key[0] == $video_key)
             {
-                $video_num = $i;
+                $video_num = $i + 1;
             }
             $i += 1;
         }
+        if ($video_num == null)
+        {
+            echo "
+            <body class='default'>
+                <div class='body'>
+                    <h1>Video ID error</h1>
+                    <h3>" . $video_key . " not a valid video ID</h3>
+                </div>
+            </body>
+            ";
+        }
+        else
+        {
+            $video_num -= 1;
     ?>
     <title>Vortex - <?php
         echo $database[$video_num][0];
@@ -74,5 +88,8 @@
                 </div>
             </div>
         </div>
+        <?php
+        }
+        ?>
     </body>
 </html>
