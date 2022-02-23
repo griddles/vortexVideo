@@ -36,7 +36,8 @@
             <body class='default'>
                 <div class='body'>
                     <h1>Video ID error</h1>
-                    <h3>" . $video_key . " not a valid video ID</h3>
+                    <h3>" . $video_key . " is not a valid video ID</h3>
+                    <h4>The video you're looking for isn't here, it may have been removed.</h4>
                 </div>
             </body>
             ";
