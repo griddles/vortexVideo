@@ -21,42 +21,23 @@
             $conn = OpenCon(); // connect to the database
             $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values
             $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                $row = mysqli_fetch_row($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
-            ?>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.php?0"><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
+            $database = mysqli_fetch_all($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
+            $i = 0;
+            while ($i < count($database)){
+                echo "
+                <div class='inline thumbnail'>
+                <div class='thumbnailfade'></div>
+                <a href='video.php?0'><img src='images/thumbnailPlaceholder.png' width='384' height='auto'></a>
                 <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <div class="inline thumbnailtitle" title="<?php echo $row[0]; ?>" style="width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
-                        <?php
-                            echo $row[0]; // grab the current video title
-                            $row = mysqli_fetch_row($result); // move on to the next video entry
-                        ?>
-                    </div>
+                    <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
+                    <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;'>"
+                     . $database[$i][0] .
+                    "</div>
                 </div>
             </div>
-            <div class="inline thumbnail">
-                <div class="thumbnailfade"></div>
-                <a href="video.php?1"><!-- using 0, 1, 2, etc. as links for the videos is super dangerous, this needs to be changed to some random base 72 string or something --><img src="images/thumbnailPlaceholder.png" width="384" height="auto"></a>
-                <div>
-                    <img class="creatoricon" src="images/vortexLogo.png" width="32" height="32">
-                    <div class="inline thumbnailtitle" title="<?php echo $row[0]; ?>" style="width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
-                        <?php
-                            echo $row[0];
-                            $row = mysqli_fetch_row($result);
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
-        else {
-            echo "0 results";
+                ";
+                $i += 1;
             }
-            CloseCon($conn);
             ?>
         </div>
     </body>
