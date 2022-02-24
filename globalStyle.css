@@ -73,16 +73,16 @@
 .thumbnail /*formatting for the thumbnail images*/
 {
     z-index:1;
-    padding:16px;
-    margin:16px;
+    padding:8px;
+    margin:8px;
     background-color:#282828;
 }
 
 .thumbnailfade /*handling the thumbnail gradient fade effect*/
 {
     z-index:2;
-    width:256;
-    height:144;
+    width:320;
+    height:180;
     opacity:0;
     background:linear-gradient(45deg,#4000ff, #6900d9);
     position:absolute;
@@ -92,14 +92,15 @@
 
 .thumbnail:hover > .thumbnailfade /*the desired opacity for the thumbnail fade*/
 {
-    opacity:0.15
+    opacity:0.1;
 }
 
 .thumbnailtitle /*style for the title of the video*/
 {
+    margin-top:4px;
     margin-left:8px;
-    font-size:large;
     position:absolute;
+    vertical-align:middle;
 }
 
 .videotable /*spacing for the hidden table that organizes videos*/
