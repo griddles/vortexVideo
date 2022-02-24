@@ -81,8 +81,8 @@
 .thumbnailfade /*handling the thumbnail gradient fade effect*/
 {
     z-index:2;
-    width:384;
-    height:216;
+    width:256;
+    height:144;
     opacity:0;
     background:linear-gradient(45deg,#4000ff, #6900d9);
     position:absolute;
@@ -97,7 +97,6 @@
 
 .thumbnailtitle /*style for the title of the video*/
 {
-    margin-top:12px;
     margin-left:8px;
     font-size:large;
     position:absolute;

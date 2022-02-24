@@ -27,7 +27,7 @@
                 echo "
                 <div class='inline thumbnail'>
                 <div class='thumbnailfade'></div>
-                <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='384' height='auto'></a>
+                <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='256' height='auto'></a>
                 <div>
                     <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
                     <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:350px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;'>"
