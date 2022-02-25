@@ -49,6 +49,22 @@
     outline:none;
 }
 
+.signin
+{
+    float:right;
+    margin-top:32px;
+    margin-right:64px;
+    padding:8px 24px 8px 24px;
+    font-size:larger;
+    background-color:#404040;
+    color:#d1d1d1;
+    border-width:2px;
+    border-style:solid;
+    border-color:#404040;
+    border-radius:4px;
+    cursor:pointer;
+}
+
 .sidebar /*formatting for the sidebar*/
 {
     height: 100%;
