@@ -24,6 +24,8 @@ We currently need (in order of importance):
  - Someone who knows how to use databases (SQL/SQLite? I've never used databases before)
  - Art Designers
 
+lol github thinks i wrote a bunch of this in Hack, whatever that is. I think its a version of PHP, so i guess it thinks my normal PHP is Hack.
+
 ---
 
 ### Who am I?
