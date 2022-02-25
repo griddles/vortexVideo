@@ -184,6 +184,35 @@
     outline:none;
 }
 
+.loginform
+{
+    margin:16px;
+}
+
+.registerform
+{
+    margin:16px;
+}
+
+.formtable
+{
+    vertical-align:top;
+}
+
+.loginbutton
+{
+    background-color:#282828;
+    border-color:#282828;
+    border-style:solid;
+    border-width:4px;
+    border-radius:4px;
+    font-size:larger;
+    padding:4px 8px 4px 8px;
+    margin-top:8px;
+    color:#d1d1d1;
+    cursor:pointer;
+}
+
 .navlink /*formatting for links in the sidebar*/
 {
     margin-top:8px;

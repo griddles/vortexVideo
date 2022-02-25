@@ -19,18 +19,36 @@
             <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
-            <div class="accountform">
-                <form method="post" action="loggedin.php">
-                    <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
-                    <br>
-                    <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
-                    <br>
-                    <input type="submit">
-                </form>
-            </div>
-            <div>
-                <a href="accountcreate.php"><button>Register</button></a>
-            </div>
+            <table>
+                <tr>
+                    <td class="formtable">
+                        <div class="loginform">
+                            <h2>Log In</h2>
+                            <form method="post" action="loggedin.php">
+                                <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
+                                <br>
+                                <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
+                                <br>
+                                <input class="loginbutton" type="submit">
+                            </form>
+                        </div>
+                    </td>
+                    <td class="formtable">
+                        <div class="registerform">
+                            <h2>Create Account</h2>
+                            <form method="post" action="accountcreated.php">
+                                <input class="signinfield" placeholder="Username" name="inputUser" id="inputUser">
+                                <br>
+                                <input class="signinfield" placeholder="Email" name="inputEmail" id="inputEmail">
+                                <br>
+                                <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
+                                <br>
+                                <input class="loginbutton" type="submit">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
