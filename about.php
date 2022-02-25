@@ -65,6 +65,16 @@
                     <li>Vortex will never change these policies, unless a vote is passed through both the Vortex team AND all major content creators, with a score of over 80% in favor. This policy cannot be changed.</li>
                 </ul>
             </p>
+            <h1>Contact Us</h1>
+            <p class="bodytext">
+                this is all fake lol
+                <ul class="bodytext">
+                    <li>Phone: (830)-420-6969</li>
+                    <li>Buisness Email: buisness@vortex.com</li>
+                    <li>Customer Support Email: support@vortex.com</li>
+                    <li>Mailing Address: 1234 N. Cool Person St., Denver, TX 54321</li>
+                </ul>
+            </p>
         </div>
     </body>
 </html>
