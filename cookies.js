@@ -1,4 +1,4 @@
-function setUser()
+function setUser() // set the username cookie
 {
     usernameElement = document.getElementById("username")
     username = usernameElement.innerHTML;
@@ -6,7 +6,7 @@ function setUser()
     console.log(username)
 }
 
-function getUser()
+function getUser() // get the username cookie
 {
     signinbutton = document.getElementById("signin")
     accountbutton = document.getElementById("account")
@@ -31,7 +31,7 @@ function getUser()
     }
 }
 
-function signOut()
+function signOut() // remove the username cookie
 {
     document.cookie = "username="
 }
