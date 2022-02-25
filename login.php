@@ -37,9 +37,9 @@
                         <div class="registerform">
                             <h2>Create Account</h2>
                             <form method="post" action="accountcreated.php">
-                                <input class="signinfield" placeholder="Username" name="inputUser" id="inputUser">
+                                <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
                                 <br>
-                                <input class="signinfield" placeholder="Email" name="inputEmail" id="inputEmail">
+                                <input class="signinfield" autocomplete="off" placeholder="Email" name="inputEmail" id="inputEmail">
                                 <br>
                                 <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
                                 <br>
