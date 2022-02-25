@@ -16,6 +16,10 @@
             <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
+            <b><p class="bodytext">
+                note: the below paragraphs are written under the theoretical assumption that Vortex has become a successful company and is at least competing with, if not beating Youtube in the video hosting market. 
+                This is mostly a placeholder to test long sections of text and will be replaced before Vortex actually launches as a website.
+            </p></b>
             <h1>Who we are</h1>
             <p class="bodytext">
                 Vortex is developed and run primarily by the Vortex team, composed of many developers and designers from all over the world. Many of these developers were a part of the Vortex beta development program, 
