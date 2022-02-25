@@ -50,7 +50,7 @@
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
     </head>
-    <title>Vortex - Home</title>
+    <title>Vortex - Logged In</title>
     <body class="default" onload="setUser()">
         <div class="sticky">
             <a class="inline" href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="240px"></a>
