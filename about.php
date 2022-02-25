@@ -1,5 +1,5 @@
 <html>
-<head>
+    <head>
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
