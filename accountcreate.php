@@ -25,7 +25,7 @@
                     <br>
                     <input placeholder="Email" name="inputEmail" id="inputEmail">
                     <br>
-                    <input placeholder="Password" name="inputPass" id="inputPass">
+                    <input type="password" placeholder="Password" name="inputPass" id="inputPass">
                     <br>
                     <input type="submit">
                 </form>

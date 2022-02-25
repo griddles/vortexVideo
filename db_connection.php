@@ -25,7 +25,7 @@ function console_log($output, $with_script_tags = true) {
 function create_account($username, $email, $password)
 {
     $con = OpenCon();
-    $sql = "INSERT INTO `vortexaccounts` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password');";
+    $sql = "INSERT INTO `vortexaccounts` (`username`, `email`, `pass`) VALUES ('$username', '$email', '$password');";
     $rs = mysqli_query($con, $sql);
 }
 ?>

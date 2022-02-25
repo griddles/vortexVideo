@@ -18,5 +18,19 @@
             <div class="navlink"><a href="index.php">Home</a></div>
             <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
+        <div class="body">
+            <div class="accountform">
+                <form method="post" action="loggedin.php">
+                    <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
+                    <br>
+                    <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div>
+                <a href="accountcreate.php"><button>Register</button></a>
+            </div>
+        </div>
     </body>
 </html>

@@ -19,7 +19,6 @@ function getUser()
         {
             paddedUser = parsedUser[i].padEnd(parsedUser[i].length + 1)
             user = paddedUser.slice(9, -1);
-            
         }
     }
     if (user == "")

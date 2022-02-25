@@ -166,6 +166,24 @@
     color:#808080;
 }
 
+.signinfield
+{
+    background-color:#202020;
+    border-color:#202020;
+    border-style:solid;
+    border-width:4px;
+    border-radius:4px;
+    font-size:larger;
+    margin-top:8px;
+    color:#d1d1d1;
+}
+
+.signinfield:focus
+{
+    border-width:4px;
+    outline:none;
+}
+
 .navlink /*formatting for links in the sidebar*/
 {
     margin-top:8px;
