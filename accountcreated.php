@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
+        <meta http-equiv = "refresh" content = "3; url = account.php"/>
     </head>
     <title>Vortex - Account Created</title>
     <body class="default" onload="setUser()">
@@ -26,7 +27,7 @@
         </div>
         <div id="username" style="display:none;"><?php echo $username; ?></div>
         <div class="body">
-            <h3>Account Created :)</h3>
+            <h3>Account Created, Redirecting...</h3>
         </div>
     </body>
 </html>
