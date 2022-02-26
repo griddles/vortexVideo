@@ -28,6 +28,11 @@ function getUser() // get the username cookie
     else
     {
         signinbutton.style.display = "none";
+        accountname = document.getElementById("accountname")
+        if (accountname != null)
+        {
+            accountname.innerHTML = user
+        }
     }
 }
 

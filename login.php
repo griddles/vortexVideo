@@ -12,7 +12,6 @@
                 <input class="searchbar" placeholder="Search">
             </form>
             <a href="login.php"><button class="inline signin" id="signin">Sign In</button></a>
-            <a href="account.php"><button class="inline signin" id="account">Account</button><a>
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="index.php">Home</a></div>
@@ -29,7 +28,7 @@
                                 <br>
                                 <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
                                 <br>
-                                <input class="loginbutton" type="submit">
+                                <input class="button" type="submit">
                             </form>
                         </div>
                     </td>
@@ -43,7 +42,7 @@
                                 <br>
                                 <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
                                 <br>
-                                <input class="loginbutton" type="submit">
+                                <input class="button" type="submit">
                             </form>
                         </div>
                     </td>

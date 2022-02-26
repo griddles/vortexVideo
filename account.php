@@ -19,7 +19,12 @@
             <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
-            <button onclick="signOut()">Sign Out</button>
+            <h1 id="accountname">
+                [placeholder]
+            </h1>
+            <div>
+                <a href="index.php"><button class="button" onclick="signOut()">Sign Out</button></a>
+            </div>
         </div>
     </body>
 </html>
