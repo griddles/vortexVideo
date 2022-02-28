@@ -1,5 +1,7 @@
-<html>    
+<!DOCTYPE html>
+<html>
     <head>
+        <meta name="viewport" content="width=device; initial=scale:1.0;">
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
@@ -22,6 +24,28 @@
             <h1 id="accountname">
                 [placeholder]
             </h1>
+            <div>
+                <?php
+                include "db_connection.php";
+                while ($i < count($database)){ // dynamic thumbnails
+                    echo "
+                    <div class='inline thumbnail'>
+                        <div class='thumbnailfade'></div>
+                        <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
+                        <div>
+                            <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
+                            <b>
+                                <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
+                                . $database[$i][0] .
+                                "</div>
+                            </b>
+                        </div>
+                    </div>
+                    ";
+                    $i += 1;
+                }
+                ?>
+            </div>
             <div>
                 <a href="index.php"><button class="button" onclick="signOut()">Sign Out</button></a>
             </div>

@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device; initial=scale:1.0;">
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
@@ -65,9 +67,9 @@
         </div>
         <div class="body">
             <div class="video">
-                <video height="100%" controls="true">
+                <video width="69%" height="auto" controls="true">
                     <source src="videos/<?php echo $database[$video_num][3]; ?>">
-                    <img src="images/thumbnailPlaceholder.png" width="auto" height="100%">
+                    <img src="images/thumbnailPlaceholder.png" width="100%" height="auto">
                 </video>
                 <div class="inline videodetails">
                     <h2 class="videotitle">
