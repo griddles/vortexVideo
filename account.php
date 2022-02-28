@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device; initial=scale:1.0;">
+        <meta name="viewport" content="width=device, initial-scale=1.0">
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
@@ -27,16 +27,35 @@
             <div>
                 <?php
                 include "db_connection.php";
-                while ($i < count($database)){ // dynamic thumbnails
+                $conn = OpenCon();
+                $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
+                $result = $conn->query($sql);
+                $database = mysqli_fetch_all($result);
+
+                $sorteddatabase = array();
+                $i = 0;
+                while ($i < count($database))
+                {
+                    if ($database[$i][1] == $_COOKIE["username"])
+                    {
+                        array_push($sorteddatabase, $database[$i]);
+                    }
+                    $i += 1;
+                }
+                
+                $i = 0;
+
+                while ($i < count($sorteddatabase))
+                {
                     echo "
                     <div class='inline thumbnail'>
                         <div class='thumbnailfade'></div>
-                        <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
+                        <a href='video.php?" . $sorteddatabase[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
                         <div>
                             <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
                             <b>
-                                <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
-                                . $database[$i][0] .
+                                <div class='inline thumbnailtitle' title='" . $sorteddatabase[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
+                                . $sorteddatabase[$i][0] .
                                 "</div>
                             </b>
                         </div>
