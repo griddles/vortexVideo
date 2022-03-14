@@ -31,7 +31,7 @@
             while ($i < count($database)){ // dynamic thumbnails
                 echo "
                 <div class='inline thumbnail'>
-                    <div class='thumbnailfade'></div>
+                    <div class='thumbnailfade'>&nbsp</div>
                     <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
                     <div>
                         <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
