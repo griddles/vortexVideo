@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device; initial=scale:1.0;">
         <link rel="stylesheet" href="globalStyle.css">
@@ -36,7 +36,7 @@
                     <div>
                         <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
                         <b>
-                            <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
+                            <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:280px; text-overflow:ellipsis; overflow:auto;'>"
                             . $database[$i][0] .
                             "</div>
                         </b>

@@ -69,7 +69,7 @@
             <div class="video">
                 <video width="69%" height="auto" controls="true">
                     <source src="videos/<?php echo $database[$video_num][3]; ?>">
-                    <img src="images/thumbnailPlaceholder.png" width="100%" height="auto">
+                    your computer is too old to play a video in a browser
                 </video>
                 <div class="inline videodetails">
                     <h2 class="videotitle">
