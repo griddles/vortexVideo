@@ -213,6 +213,12 @@
     cursor:pointer;
 }
 
+.username
+{
+    position:absolute;
+    margin-left:16px;
+}
+
 .navlink /*formatting for links in the sidebar*/
 {
     margin-top:8px;

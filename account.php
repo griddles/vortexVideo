@@ -21,52 +21,66 @@
             <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
-            <h1 id="accountname">
+            <?php 
+                include "db_connection.php";
+                error_reporting(0);
+                $username = $_GET["username"];
+                if ($username != "")
+                {
+                    setcookie("pfp", "images/accountpfps/" . $username . ".png");
+                }
+            ?>
+            <a href="uploadpfp.php">
+                <img src="<?php echo $_COOKIE["pfp"]; ?>" width="64px" height="64px">
+                <?php echo $_COOKIE["pfp"]; ?>
+            </a>
+            <h1 id="accountname" class="inline username">
                 [placeholder]
             </h1>
             <div>
                 <?php
-                include "db_connection.php";
-                $conn = OpenCon();
-                $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
-                $result = $conn->query($sql);
-                $database = mysqli_fetch_all($result);
-
-                $sorteddatabase = array();
-                $i = 0;
-                while ($i < count($database))
-                {
-                    if ($database[$i][1] == $_COOKIE["username"])
+                    $conn = OpenCon();
+                    $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
+                    $result = $conn->query($sql);
+                    $database = mysqli_fetch_all($result);
+                    
+                    $sorteddatabase = array();
+                    $i = 0;
+                    while ($i < count($database))
                     {
-                        array_push($sorteddatabase, $database[$i]);
+                        if ($database[$i][1] == $_COOKIE["username"])
+                        {
+                            array_push($sorteddatabase, $database[$i]);
+                        }
+                        $i += 1;
                     }
-                    $i += 1;
-                }
-                
-                $i = 0;
-                while ($i < count($sorteddatabase))
-                {
-                    echo "
-                    <div class='inline thumbnail'>
-                        <div class='thumbnailfade'></div>
-                        <a href='video.php?" . $sorteddatabase[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
-                        <div>
-                            <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
-                            <b>
-                                <div class='inline thumbnailtitle' title='" . $sorteddatabase[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
-                                . $sorteddatabase[$i][0] .
-                                "</div>
-                            </b>
+                    
+                    $i = 0;
+                    while ($i < count($sorteddatabase))
+                    {
+                        echo "
+                        <div class='inline thumbnail'>
+                            <div class='thumbnailfade'></div>
+                            <a href='video.php?" . $sorteddatabase[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
+                            <div>
+                                <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
+                                <b>
+                                    <div class='inline thumbnailtitle' title='" . $sorteddatabase[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
+                                    . $sorteddatabase[$i][0] .
+                                    "</div>
+                                </b>
+                            </div>
                         </div>
-                    </div>
-                    ";
-                    $i += 1;
-                }
+                        ";
+                        $i += 1;
+                    }
                 ?>
             </div>
             <div>
-                <a href="index.php"><button class="button" onclick="signOut()">Sign Out</button></a>
+                <a href="index.php?logout=true"><button class="button" onclick="signOut()">Sign Out</button></a>
             </div>
+            <br>
+            <br>
         </div>
     </body>
 </html>

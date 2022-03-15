@@ -1,5 +1,6 @@
 <?php
     include "db_connection.php";
+    error_reporting(0);
     $username = $_POST['inputUser'];
     $password = $_POST['inputPass'];
     
@@ -16,10 +17,6 @@
 
     foreach ($logins as $login)
     {
-        console_log($username);
-        console_log($login[0]);
-        console_log($password);
-        console_log($login[2]);
         if ($login[0] == $username)
         {
             if ($login[2] == $password)
@@ -67,7 +64,7 @@
         <link rel="stylesheet" href="globalStyle.css">
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
-        <meta http-equiv = "refresh" content = "3; url = account.php"/>
+        <meta http-equiv = "refresh" content = "3; url = account.php?username=<?php echo $username; ?>"/>
     </head>
     <title>Vortex - Logged In</title>
     <body class="default" onload="setUser()">

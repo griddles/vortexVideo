@@ -8,6 +8,7 @@
     </head>
     <?php
         include 'db_connection.php'; // connect to the database
+        error_reporting(0);
         $conn = OpenCon();
         $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values from the database
         $result = $conn->query($sql);

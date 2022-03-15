@@ -3,7 +3,6 @@ function setUser() // set the username cookie
     usernameElement = document.getElementById("username")
     username = usernameElement.innerHTML;
     document.cookie = "username=" + username
-    console.log(username)
 }
 
 function getUser() // get the username cookie
@@ -36,7 +35,7 @@ function getUser() // get the username cookie
     }
 }
 
-function signOut() // remove the username cookie
+function signOut() // remove the username and pfp cookies
 {
-    document.cookie = "username="
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
 }

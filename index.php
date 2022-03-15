@@ -6,6 +6,14 @@
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
     </head>
+    <?php
+        include 'db_connection.php';
+        error_reporting(0);
+        if (isset($_GET['logout'])) 
+        {
+            setcookie("pfp", " ");
+        }
+    ?>
     <title>Vortex - Home</title>
     <body class="default" onload="getUser()">
         <div class="sticky">
@@ -22,7 +30,6 @@
         </div>
         <div class="body">
             <?php
-            include 'db_connection.php';
             $conn = OpenCon(); // connect to the database
             $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values
             $result = $conn->query($sql);
