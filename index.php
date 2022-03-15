@@ -42,7 +42,7 @@
                     <div class='thumbnailfade'>&nbsp</div>
                     <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
                     <div>
-                        <img class='creatoricon' src='images/vortexLogo.png' width='32' height='32'>
+                        <img class='creatoricon' src='images/accountpfps/" . $database[$i][1] . ".png' width='32' height='32'>
                         <b>
                             <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:280px; text-overflow:ellipsis; overflow:auto;'>"
                             . $database[$i][0] .
