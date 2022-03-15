@@ -32,7 +32,6 @@
             ?>
             <a href="uploadpfp.php">
                 <img src="<?php echo $_COOKIE["pfp"]; ?>" width="64px" height="64px">
-                <?php echo $_COOKIE["pfp"]; ?>
             </a>
             <h1 id="accountname" class="inline username">
                 [placeholder]
