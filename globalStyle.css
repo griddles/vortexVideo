@@ -65,6 +65,13 @@
     cursor:pointer;
 }
 
+.pfp
+{
+    float:right;
+    margin-right:16px;
+    margin-top:28px;
+}
+
 .sidebar /*formatting for the sidebar*/
 {
     height: 100%;
