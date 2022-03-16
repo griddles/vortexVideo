@@ -66,6 +66,9 @@
         <script src="cookies.js"></script>
         <meta http-equiv = "refresh" content = "3; url = account.php?username=<?php echo $username; ?>"/>
     </head>
+    <?php
+        error_reporting(0);
+    ?>
     <title>Vortex - Logged In</title>
     <body class="default" onload="setUser()">
         <div class="sticky">
