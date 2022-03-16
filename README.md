@@ -22,11 +22,10 @@ We currently need (in order of importance):
 
  - HTML/CSS/PHP/JS devs, to make the core of the website
  - developers who can do something relating to websites and video hosting and such, I dont know exactly what's best but if you do then let me know.
- - Someone who can handle server stuff so we can actually make this a website
- - Someone who knows how to use databases (SQL/SQLite? I've never used databases before)
- - Art Designers
-
-lol github thinks i wrote a bunch of this in Hack, whatever that is. I think its a version of PHP, so i guess it thinks my normal PHP is Hack.
+ - someone who can write some backend code, like stuff to handle the video uploading process and also the algorithm, preferably in something like c# but if you know a language  that is 1: somewhat commonly used 2: relatively easy to learn and use and 3: more efficient than c# then that would work too
+ - someone who can handle server stuff so we can actually make this a website
+ - someone who knows how to use databases (SQL/SQLite? I've never used databases before)
+ - graphic designers
 
 ---
 
