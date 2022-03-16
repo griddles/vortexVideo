@@ -21,11 +21,12 @@ Currently I have no funding for this, but if I can get enough support hopefully 
 We currently need (in order of importance):
 
  - HTML/CSS/PHP/JS devs, to make the core of the website
- - developers who can do something relating to websites and video hosting and such, I dont know exactly what's best but if you do then let me know.
  - someone who can write some backend code, like stuff to handle the video uploading process and also the algorithm, preferably in something like c# but if you know a language  that is 1: somewhat commonly used 2: relatively easy to learn and use and 3: more efficient than c# then that would work too
- - someone who can handle server stuff so we can actually make this a website
- - someone who knows how to use databases (SQL/SQLite? I've never used databases before)
+ - someone who knows how to write SQL and use mySQL databases
+ - someone who can handle server hosting stuff so we can actually make this a website
  - graphic designers
+
+you dont necessarily have to fit exactly to these, if you know more about web design/database stuff/server hosting than me (you probably do) and there's a different/better way to do all this then just hop in the discord and tell me.
 
 ---
 
