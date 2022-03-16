@@ -9,6 +9,8 @@ Some of these include:
  - A much looser content guideline system that still blocks actually harmful content, not "guns with magazines of over 10 rounds" like Youtube   
  - A system in which all users are notified of changes at least a week before they release, and creators are given a vote on whether the change should be kept, modified, or discarded, both before and after the change is released. Obviously this wouldn't apply to some changes, like stuff having to do with the backend stuff or other very important changes.    
 
+obviously this is a super ambitious idea, as the website probably wont even be functional for another year or more, but if nobody even tries to compete with youtube, nobody will compete with youtube, and we dont want that.
+
 It's probably a bad idea to follow this repo unless you actually wanna help out developing it, since I commit stuff way too often and without making major changes sometimes, so you'll just get a bunch of garbage notifications.
 
 ---
@@ -21,12 +23,12 @@ Currently I have no funding for this, but if I can get enough support hopefully 
 We currently need (in order of importance):
 
  - HTML/CSS/PHP/JS devs, to make the core of the website
- - developers who can do something relating to websites and video hosting and such, I dont know exactly what's best but if you do then let me know.
- - Someone who can handle server stuff so we can actually make this a website
- - Someone who knows how to use databases (SQL/SQLite? I've never used databases before)
- - Art Designers
+ - someone who can write some backend code, like stuff to handle the video uploading process and also the algorithm, preferably in something like c# but if you know a language  that is 1: somewhat commonly used 2: relatively easy to learn and use and 3: more efficient than c# then that would work too
+ - someone who knows how to write SQL and use mySQL databases
+ - someone who can handle server hosting stuff so we can actually make this a website
+ - graphic designers
 
-lol github thinks i wrote a bunch of this in Hack, whatever that is. I think its a version of PHP, so i guess it thinks my normal PHP is Hack.
+you dont necessarily have to fit exactly to these, if you know more about web design/database stuff/server hosting than me (you probably do) and there's a different/better way to do all this then just hop in the discord and tell me.
 
 ---
 
