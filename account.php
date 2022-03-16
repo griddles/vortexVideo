@@ -6,6 +6,10 @@
         <link rel="icon" href="images/vortexLogo.png">
         <script src="cookies.js"></script>
     </head>
+    <?php
+        include "db_connection.php";
+        error_reporting(0);
+    ?>
     <title>Vortex - My Account</title>
     <body class="default" onload="getUser()">
         <div class="sticky">
@@ -23,12 +27,11 @@
         </div>
         <div class="body">
             <?php 
-                include "db_connection.php";
-                error_reporting(0);
                 $username = $_GET["username"];
                 if ($username != "")
                 {
                     setcookie("pfp", "images/accountpfps/" . $username . ".png");
+                    header("Refresh:0 url=account.php");
                 }
             ?>
             <a href="uploadpfp.php">

@@ -83,7 +83,7 @@
         <div id="username" style="display:none;"><?php echo $username; ?></div>
         <div class="body">
             <h3>Successfully Signed In</h3>
-            <h5>Redirecting...</h5>
+            <h4>Redirecting...</h4>
         </div>
     </body>
 </html>
