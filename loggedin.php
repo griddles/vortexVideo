@@ -74,7 +74,7 @@
                 <input class="searchbar" placeholder="Search">
             </form>
             <a href="account.php"><button class="inline signin" id="account">Account</button><a>
-            <img class="inline pfp" id="pfp" src="<?php echo $_COOKIE["pfp"]; ?>" width="48px" height="48px">
+            <img class="inline pfp" id="pfp" src="images/maskdark.png" style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="48px" height="48px">>
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="index.php">Home</a></div>

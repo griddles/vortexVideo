@@ -15,7 +15,7 @@
             </form>
             <a href="login.php"><button class="inline signin" id="signin">Sign In</button></a>
             <a href="account.php"><button class="inline signin" id="account">Account</button><a>
-            <img class="inline" id="account" src="<?php echo $_COOKIE["php"]; ?>" width="48px" height="48px">
+            <img class="inline pfp" id="pfp" src="images/maskdark.png" style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="48px" height="48px">
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="index.php">Home</a></div>
