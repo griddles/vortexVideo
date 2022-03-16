@@ -136,6 +136,12 @@
 .creatoricon /*margins for the creator's icon in the thumbnail*/
 {
     margin-top:4px;
+    background-size:100% 100%;
+}
+
+.accountpfp
+{
+    background-size:100% 100%;
 }
 
 .video /*styling for the actual video box*/

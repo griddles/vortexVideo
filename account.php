@@ -32,7 +32,7 @@
                 }
             ?>
             <a href="uploadpfp.php">
-                <img src="<?php echo $_COOKIE["pfp"]; ?>" width="64px" height="64px">
+                <img class="accountpfp" src=images/masklight.png style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="64px" height="64px">
             </a>
             <h1 id="accountname" class="inline username">
                 [placeholder]
@@ -63,7 +63,7 @@
                             <div class='thumbnailfade'></div>
                             <a href='video.php?" . $sorteddatabase[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
                             <div>
-                                <img class='creatoricon' src='images/accountpfps/" . $sorteddatabase[$i][1] . ".png' width='32' height='32'>
+                            <img class='creatoricon' src='images/maskmid.png' style='background-image:url(\"images/accountpfps/" . $database[$i][1] . ".png\")' width='32' height='32'>
                                 <b>
                                     <div class='inline thumbnailtitle' title='" . $sorteddatabase[$i][0] . "' style='width:300px; text-overflow:ellipsis; overflow:auto;'>"
                                     . $sorteddatabase[$i][0] .
