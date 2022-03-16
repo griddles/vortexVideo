@@ -41,7 +41,7 @@
                     }
                     // check if file already exists
                     if (file_exists($target_file)) {
-                        echo "Sorry, file already exists. Try renaming file.";
+                        echo "Due to an internal server confliction, your filename conflicted with a different file. Try renaming it. This problem should be fixed in a future update.";
                         $uploadOk = 0;
                     }
                     // check file size
@@ -62,6 +62,10 @@
                     } else {
                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                             echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                            if (file_exists($target_dir . $_COOKIE["username"] . ".png"))
+                            {
+                                unlink($target_dir . $_COOKIE["username"] . ".png");
+                            }
                             rename($target_file, $target_dir . $_COOKIE["username"] . ".png");
                             setcookie("pfp", $target_dir . $_COOKIE["username"] . ".png");
                         } else {
