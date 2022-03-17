@@ -35,7 +35,7 @@
             $conn = OpenCon(); // connect to the database
             $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values
             $result = $conn->query($sql);
-            $database = mysqli_fetch_all($result); // not sure what this is doing, but i think if i remove it the program breaks so cool
+            $database = mysqli_fetch_all($result);
             $i = 0;
             while ($i < count($database)){ // dynamic thumbnails
                 echo "
