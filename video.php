@@ -16,10 +16,7 @@
         $key = "SELECT videokey FROM vortexvideos"; // get a list of video keys seperate from the rest of the values
         $keyresult = $conn->query($key);
 
-        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; // filter the url a bit
- 
-        $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; // strip it for the query stuff
-        $video_key = ltrim(strstr($url, '?'), '?'); // parse the query stuff out
+        $video_key = $_GET["v"];
 
         $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
 

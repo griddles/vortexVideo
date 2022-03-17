@@ -41,7 +41,7 @@
                 echo "
                 <div class='inline thumbnail'>
                     <div class='thumbnailfade'>&nbsp</div>
-                    <a href='video.php?" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
+                    <a href='video.php?v=" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
                     <div>
                         <img class='creatoricon' src='images/maskmid.png' style='background-image:url(\"images/accountpfps/" . $database[$i][1] . ".png\")' width='32' height='32'>
                         <b>
