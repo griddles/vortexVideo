@@ -228,6 +228,12 @@
     cursor:pointer;
 }
 
+.settings
+{
+    float:right;
+    margin-right:64px;
+}
+
 .username
 {
     position:absolute;
@@ -243,14 +249,14 @@ a:link /*make standard links vortex titanium*/
 {
     color: #d1d1d1;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:visited /*make visited links vortex titanium*/
 {
     color: #d1d1d1;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
 }
   
 a:hover /*make hovered links vortex purple*/

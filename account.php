@@ -34,12 +34,11 @@
                     header("Refresh:0 url=account.php");
                 }
             ?>
-            <a href="uploadpfp.php">
-                <img class="accountpfp" src=images/masklight.png style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="64px" height="64px">
-            </a>
+            <img class="accountpfp" src=images/masklight.png style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="64px" height="64px">
             <h1 id="accountname" class="inline username">
                 [placeholder]
             </h1>
+            <a href="accountsettings.php"><button class="settings button">Settings</button></a>
             <div>
                 <?php
                     $conn = OpenCon();
