@@ -36,7 +36,7 @@
                 <br>
                 <input class="signinfield" autocomplete="off" type="password" placeholder="Password" name="inputPass" id="inputPass">
                 <br>
-                <input class="button" type="submit" value="Delete Account">
+                <input class="button" type="submit" value="Delete Account (broken)">
             </form>
         </div>
     </body>
