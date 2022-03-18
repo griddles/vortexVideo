@@ -1,5 +1,4 @@
 <?php
-    error_reporting(0);
     include "db_connection.php";
     $username = $_POST['inputUser'];
     $password = $_POST['inputPass'];
@@ -58,10 +57,17 @@
     }
     else
     {
-        $deletesql = "DELETE FROM vortexaccounts WHERE username=" . $username;
+        $deletesql = "DELETE FROM `vortexaccounts` WHERE `username` = `test1234`";
         console_log("starting deletion process for " . $username);
         console_log($deletesql);
-        mysqli_query($conn, $deletesql);
+        if(mysqli_query($conn, $deletesql))
+        {  
+            echo "Record deleted successfully";  
+        }
+        else
+        {
+            echo "Could not deleted record: ". mysqli_error($conn);  
+        } 
         console_log("deleted.");
         header('Location: deletedaccount.php');
     }
