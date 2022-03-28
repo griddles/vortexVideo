@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
     include "db_connection.php";
     error_reporting(0);
