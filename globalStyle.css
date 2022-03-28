@@ -1,4 +1,4 @@
-.default /*standard font/colors*/
+.default /* standard font/colors */
 {
     font-family:Arial, Helvetica, sans-serif;
     margin:0px;
@@ -6,13 +6,13 @@
     color:#d1d1d1;
 }
 
-.body /*an extra margin so the main body of the page doesn't get sucked up by the sidebar*/
+.body /* an extra margin so the main body of the page doesn't get sucked up by the sidebar */
 {
     margin-left:256px !important;
     margin-top:32px;
 }
 
-.sticky /*the sticky header*/
+.sticky /* the sticky header */
 {
     position:-webkit-sticky;
     position:sticky;
@@ -21,12 +21,12 @@
     background-color:#202020;
 }
 
-.inline /*anything inline with other items, eg. the logo and searchbar*/
+.inline /* anything inline with other items, eg. the logo and searchbar */
 {
     display:inline-block;
 }
 
-.searchbar /*the actual searchbar formatting*/
+.searchbar /* the actual searchbar formatting */
 {
     margin-left:6%;
     width:40%;
@@ -43,13 +43,13 @@
     color:#d1d1d1;
 }
 
-.searchbar:focus /*make sure the searchbar doesn't change when someone types in it*/
+.searchbar:focus /* make sure the searchbar doesn't change when someone types in it */
 {
     border-width:8px;
     outline:none;
 }
 
-.signin
+.signin /* for the sign in fields */
 {
     float:right;
     margin-top:32px;
@@ -74,7 +74,7 @@
     background-size:100% 100%;
 }
 
-.sidebar /*formatting for the sidebar*/
+.sidebar /* for the sidebar*/
 {
     height: 100%;
     width: 192px;
@@ -89,13 +89,13 @@
     font-size:x-large;
 }
 
-.bodytext /*formatting for text in the body of the page*/
+.bodytext /* for text in the body of the page*/
 {
     padding-right:31%;
     font-size:larger;
 }
 
-.thumbnail /*formatting for the thumbnail images*/
+.thumbnail /* for the thumbnail images*/
 {
     z-index:1;
     padding:8px;
@@ -240,7 +240,7 @@
     margin-left:16px;
 }
 
-.navlink /*formatting for links in the sidebar*/
+.navlink /* for links in the sidebar*/
 {
     margin-top:8px;
 }
