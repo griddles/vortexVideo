@@ -65,7 +65,7 @@
     cursor:pointer;
 }
 
-.pfp
+.pfp /* padding and stuff for the profile picture */
 {
     float:right;
     margin-right:16px;
@@ -139,7 +139,7 @@
     background-size:100% 100%;
 }
 
-.accountpfp
+.accountpfp /* make the profile picture on the account page properly sized */
 {
     background-size:100% 100%;
 }
@@ -153,35 +153,35 @@
     height:60%;
 }
 
-.videodetails
+.videodetails /* make sure the details for the video are in the right place */
 {
     margin:16px;
     position:absolute;
 }
 
-.videotitle
+.videotitle /* color the title and make sure it doesnt overflow */
 {
     color:#d1d1d1;
     width:320px;
 }
 
-.videocreator
+.videocreator /* color for the account name of the creator of the video */
 {
     color:#d1d1d1;
 }
 
-.videoviews
+.videoviews /* styling for the view counter */
 {
     color:#696969;
     font-size:smaller;
 }
 
-.videoviews:hover
+.videoviews:hover /* make the view counter reactive */
 {
     color:#808080;
 }
 
-.signinfield
+.signinfield /* format all the sign in fields */
 {
     background-color:#202020;
     border-color:#202020;
@@ -193,28 +193,28 @@
     color:#d1d1d1;
 }
 
-.signinfield:focus
+.signinfield:focus /* make sure they dont change when they are focused */
 {
     border-width:4px;
     outline:none;
 }
 
-.loginform
+.loginform /* quick margin for the forms */
 {
     margin:16px;
 }
 
-.registerform
+.registerform /* same (probably gonna be used for something else later) */
 {
     margin:16px;
 }
 
-.formtable
+.formtable /* making sure the login and register forms are in the right place on the page */
 {
     vertical-align:top;
 }
 
-.button
+.button /* general formatting for buttons */
 {
     background-color:#282828;
     border-color:#282828;
@@ -228,13 +228,13 @@
     cursor:pointer;
 }
 
-.settings
+.settings /* positioning for the settings button on the account page */
 {
     float:right;
     margin-right:64px;
 }
 
-.username
+.username /* put the username in the correct place */
 {
     position:absolute;
     margin-left:16px;
@@ -245,28 +245,28 @@
     margin-top:8px;
 }
 
-a:link /*make standard links vortex titanium*/
+a:link /* make standard links vortex titanium */
 {
     color: #d1d1d1;
     background-color: transparent;
     text-decoration: none;
 }
 
-a:visited /*make visited links vortex titanium*/
+a:visited /* make visited links vortex titanium */
 {
     color: #d1d1d1;
     background-color: transparent;
     text-decoration: none;
 }
   
-a:hover /*make hovered links vortex purple*/
+a:hover /* make hovered links vortex purple */
 {
     color: #6900d9;
     background-color: transparent;
     text-decoration: underline;
 }
   
-a:active /*make active links vortex blue*/
+a:active /* make active links vortex blue */
 {
     color: #4000ff;
     background-color: transparent;
