@@ -42,6 +42,7 @@
             $i = 0;
             if ($searchtag != null)
             {
+                echo "<h4>Searching for " . $searchtag . ":</h4>";
                 while ($i < count($database))
                 {
                     $tags = explode("|", $database[$i][5]); //i know i could use str_contains here, but that'll 
