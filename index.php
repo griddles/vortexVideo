@@ -57,8 +57,10 @@
                     }
                     if (str_contains(strtolower($database[$i][0]), strtolower($searchtag)))
                     {
-                        array_push($sorteddatabase, $database[$i]);
-                        break;
+                        if (!in_array($database[$i], $sorteddatabase))
+                        {
+                            array_push($sorteddatabase, $database[$i]);
+                        }
                     }
                     $i += 1;
                 }
