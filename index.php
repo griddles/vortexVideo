@@ -19,8 +19,8 @@
     <body class="default" onload="getUser()">
         <div class="sticky">
             <a class="inline" href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="240px"></a>
-            <form class="inline">
-                <input class="searchbar" placeholder="Search">
+            <form class="inline" method="post" action="index.php">
+                <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
             <a href="login.php"><button class="inline signin" id="signin">Sign In</button></a>
             <a href="account.php"><button class="inline signin" id="account">Account</button><a>
@@ -33,20 +33,58 @@
         <div class="body">
             <?php
             $conn = OpenCon(); // connect to the database
-            $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values
+            $sql = "SELECT title, creator, views, videopath, videokey, tags FROM vortexvideos"; // yoink the desired values
             $result = $conn->query($sql);
             $database = mysqli_fetch_all($result);
+            $sorteddatabase = array();
+
+            $searchtag = $_POST['searchbar'];
             $i = 0;
-            while ($i < count($database)){ // dynamic thumbnails
+            if ($searchtag != null)
+            {
+                while ($i < count($database))
+                {
+                    $tags = explode("|", $database[$i][5]);
+                    $j = 0;
+                    while ($j < count($tags))
+                    {
+                        if ($searchtag == $tags[$j])
+                        {
+                            array_push($sorteddatabase, $database[$i]);
+                            break;
+                        }
+                        $j += 1;
+                    }
+                    $titlewords = explode(" ", $database[$i][0]);
+                    $j = 0;
+                    while ($j < count($titlewords))
+                    {
+                        if ($searchtag == $titlewords[$j])
+                        {
+                            array_push($sorteddatabase, $database[$i]);
+                            break;
+                        }
+                        $j += 1;
+                    }
+                    $i += 1;
+                }
+            }
+            else
+            {
+                $sorteddatabase = $database;
+            }
+
+            $i = 0;
+            while ($i < count($sorteddatabase)){ // dynamic thumbnails
                 echo "
                 <div class='inline thumbnail'>
                     <div class='thumbnailfade'>&nbsp</div>
-                    <a href='video.php?v=" . $database[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
+                    <a href='video.php?v=" . $sorteddatabase[$i][4] . "'><img src='images/thumbnailPlaceholder.png' width='320' height='auto'></a>
                     <div>
-                        <img class='creatoricon' src='images/maskmid.png' style='background-image:url(\"images/accountpfps/" . $database[$i][1] . ".png\")' width='32' height='32'>
+                        <img class='creatoricon' src='images/maskmid.png' style='background-image:url(\"images/accountpfps/" . $sorteddatabase[$i][1] . ".png\")' width='32' height='32'>
                         <b>
-                            <div class='inline thumbnailtitle' title='" . $database[$i][0] . "' style='width:280px; text-overflow:ellipsis; overflow:auto;'>"
-                            . $database[$i][0] .
+                            <div class='inline thumbnailtitle' title='" . $sorteddatabase[$i][0] . "' style='width:280px; text-overflow:ellipsis; overflow:auto;'>"
+                            . $sorteddatabase[$i][0] .
                             "</div>
                         </b>
                     </div>
