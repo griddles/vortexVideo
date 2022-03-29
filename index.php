@@ -44,9 +44,9 @@
             {
                 while ($i < count($database))
                 {
-                    $tags = explode("|", $database[$i][5]);
-                    $j = 0;
-                    while ($j < count($tags))
+                    $tags = explode("|", $database[$i][5]); //i know i could use str_contains here, but that'll 
+                    $j = 0;                         //return true if the video has a tag of 'epicgamingmoment'  
+                    while ($j < count($tags)) //and the user searches 'cgami'.
                     {
                         if ($searchtag == $tags[$j])
                         {
@@ -55,16 +55,10 @@
                         }
                         $j += 1;
                     }
-                    $titlewords = explode(" ", $database[$i][0]);
-                    $j = 0;
-                    while ($j < count($titlewords))
+                    if (str_contains(strtolower($database[$i][0]), strtolower($searchtag)))
                     {
-                        if ($searchtag == $titlewords[$j])
-                        {
-                            array_push($sorteddatabase, $database[$i]);
-                            break;
-                        }
-                        $j += 1;
+                        array_push($sorteddatabase, $database[$i]);
+                        break;
                     }
                     $i += 1;
                 }
