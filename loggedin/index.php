@@ -66,7 +66,7 @@
         <link rel="stylesheet" href="../reqs/globalStyle.css">
         <link rel="icon" href="../images/vortexLogo.png">
         <script src="../reqs/cookies.js"></script>
-        <meta http-equiv="Refresh" content="0; url='../account/?account=<?php echo $username; ?>'" />
+        <meta http-equiv="refresh" content="2; url='../account/?account=<?php echo $username; ?>'" />
     </head>
     <title>Vortex - Log In</title>
     <body class="default" onload="setUser()">
