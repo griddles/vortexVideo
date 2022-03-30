@@ -57,10 +57,10 @@
     }
     else
     {
-        $deletesql = "DELETE FROM `vortexaccounts` WHERE `username` = `test1234`";
+        $deletesql = "DELETE FROM `vortexaccounts` WHERE `vortexaccounts`.`username` = 'test1234'";
         console_log("starting deletion process for " . $username);
         console_log($deletesql);
-        if(mysqli_query($conn, $deletesql))
+        if($conn->query($deletesql) === TRUE)
         {  
             echo "Record deleted successfully";  
         }
