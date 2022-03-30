@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta name="viewport" content="width=device; initial=scale:1.0;">
-        <link rel="stylesheet" href="globalStyle.css">
-        <link rel="icon" href="images/vortexLogo.png">
-        <script src="cookies.js"></script>
+        <link rel="stylesheet" href="../reqs/globalStyle.css">
+        <link rel="icon" href="../images/vortexLogo.png">
+        <script src="../reqs/cookies.js"></script>
     </head>
     <?php
-        include 'db_connection.php'; // connect to the database
+        include '../reqs/db_connection.php'; // connect to the database
         error_reporting(0);
         $conn = OpenCon();
         $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values from the database
@@ -52,22 +52,22 @@
     ?></title>
     <body class="default" onload="getUser()">
         <div class="sticky">
-            <a class="inline" href="index.php" title="Vortex.com" style="margin-left:16px"><img src="images/vortexFullLogo.png" width="240px"></a>
-            <form class="inline" method="post" action="index.php">
+            <a class="inline" href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
+            <form class="inline" method="post" action="../home/">
                 <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
-            <a href="login.php"><button class="inline signin" id="signin">Sign In</button></a>
-            <a href="account.php"><button class="inline signin" id="account">Account</button><a>
-            <img class="inline pfp" id="pfp" src="images/maskdark.png" style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="48px" height="48px">
+            <a href="../login/"><button class="inline signin" id="signin">Sign In</button></a>
+            <a href="../account/"><button class="inline signin" id="account">Account</button><a>
+            <img class="inline pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="48px" height="48px">
         </div>
         <div class="sidebar">
-            <div class="navlink"><a href="index.php">Home</a></div>
-            <div class="navlink"><a href="about.php">About Us</a></div>
+            <div class="navlink"><a href="../home/">Home</a></div>
+            <div class="navlink"><a href="../about/">About Us</a></div>
         </div>
         <div class="body">
             <div class="video">
                 <video width="69%" height="auto" controls="true">
-                    <source src="videos/<?php echo $database[$video_num][3]; ?>">
+                    <source src="../videos/<?php echo $database[$video_num][3]; ?>">
                     your computer is too old to play a video in a browser
                 </video>
                 <div class="inline videodetails">
