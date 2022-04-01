@@ -23,6 +23,7 @@
             if ($login[2] == $password)
             {
                 $usernamevalid = true;
+                setcookie("username", $username);
                 break;
             }
         }
