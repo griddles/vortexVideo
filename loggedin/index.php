@@ -60,7 +60,7 @@
     else
     {
 ?>
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device; initial=scale:1.0;">
         <link rel="stylesheet" href="../reqs/globalStyle.css">
