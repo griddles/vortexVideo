@@ -16,15 +16,25 @@
         }
     ?>
     <title>Vortex - Home</title>
-    <body class="default" onload="getUser()">
+    <body class="default">
         <div class="sticky">
             <a class="inline" href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
             <form class="inline" method="post" action="index.php">
                 <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
+            <?php
+            if ($_COOKIE["username"] == "")
+            { ?>
             <a href="../login/"><button class="inline signin" id="signin">Sign In</button></a>
+            <?php 
+            }
+            else
+            { ?>
             <a href="../account/"><button class="inline signin" id="account">Account</button><a>
             <img class="inline pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="48px" height="48px">
+            <?php
+            }
+            ?>
         </div>
         <div class="sidebar">
             <div class="navlink"><a href="../home/">Home</a></div>

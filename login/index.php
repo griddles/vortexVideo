@@ -30,21 +30,21 @@
                                 <br>
                                 <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
                                 <br>
-                                <input class="button" type="submit">
+                                <input class="button" type="submit" value="Log In">
                             </form>
                         </div>
                     </td>
                     <td class="formtable">
                         <div class="registerform">
                             <h2>Create Account</h2>
-                            <form method="post" action="accountcreated.php">
+                            <form method="post" action="../accountcreated/">
                                 <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
                                 <br>
                                 <input class="signinfield" autocomplete="off" placeholder="Email" name="inputEmail" id="inputEmail">
                                 <br>
                                 <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
                                 <br>
-                                <input class="button" type="submit">
+                                <input class="button" type="submit" value="Sign Up">
                             </form>
                         </div>
                     </td>
