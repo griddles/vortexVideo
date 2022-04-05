@@ -39,7 +39,8 @@
                     $target_dir = "../videos/";
                     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                     $uploadOk = 1;
-                    $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                    $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+                    console_log($fileType);
                     // check if image file is a actual image or fake image
                     if(isset($_POST["submit"])) {
                         $mime = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
@@ -61,6 +62,11 @@
                         echo "Sorry, your file is too large. Files must be under 1gb.";
                         $uploadOk = 0;
                     }
+                    if ($fileType != "mp4")
+                    {
+                        echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
+                        $uploadOk = 0;
+                    }
                     // check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
                         echo "Sorry, there was an unknown error. Try again.";
@@ -72,11 +78,11 @@
                             {
                                 unlink($target_dir . $_COOKIE["username"] . ".mp4");
                             }
+                            upload_video($_POST["videoTitle"], $_POST["videoTags"]);
                         } else {
                             echo "Sorry, there was an error uploading your file.";
                         }
                     }
-                    upload_video($_POST["videoTitle"], $_POST["videoTags"]);
                 ?>
             </p>
         </div>
