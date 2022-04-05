@@ -47,6 +47,7 @@
             <img class="accountpfp" src=../images/masklight.png style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="64px" height="64px">
             <h1 id="accountname" class="inline username"><?php echo $_COOKIE["username"]; ?></h1>
             <a href="../accountsettings/"><button class="settings button">Settings</button></a>
+            <a href="../uploadvideo/"><button class="settings button">Upload Video</button></a>
             <div>
                 <?php
                     $conn = OpenCon();

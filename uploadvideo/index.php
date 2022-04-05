@@ -6,7 +6,7 @@
         <link rel="icon" href="../images/vortexLogo.png">
         <script src="../reqs/cookies.js"></script>
     </head>
-    <title>Vortex - []</title>
+    <title>Vortex - Upload</title>
     <body class="default">
         <div class="sticky">
             <a class="inline" href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
@@ -14,6 +14,7 @@
                 <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
             <?php
+            error_reporting(0);
             if ($_COOKIE["username"] == "")
             { ?>
             <a href="../login/"><button class="inline signin" id="signin">Sign In</button></a>
@@ -30,6 +31,17 @@
         <div class="sidebar">
             <div class="navlink"><a href="../home/">Home</a></div>
             <div class="navlink"><a href="../about/">About Us</a></div>
+        </div>
+        <div class="body">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="text" class="field" style="width:312px;" name="videoTitle" id="videoTitle" placeholder="Video Title">
+                <br>
+                <textarea class="field" style="width:312px; height:128px; resize:none;" name="videoTags" id="videoTags" placeholder="tags, seperated with '|'"></textarea>
+                <p class="bodytext">Select video to upload:</p>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <br>
+                <input type="submit" value="Upload Video" name="submit" class="button" style="margin-top:16px;">
+            </form>
         </div>
     </body>
 </html>

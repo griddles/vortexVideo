@@ -10,7 +10,7 @@
     <body class="default">
         <div class="sticky">
             <a class="inline" href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
-            <form class="inline" method="post" action="index.php">
+            <form class="inline" method="post" action="">
                 <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
             <?php
@@ -29,23 +29,25 @@
             ?>
         </div>
         <div class="sidebar">
-            <div class="navlink"><a href="../index/">Home</a></div>
-            <div class="navlink"><a href="../about/">About Us</a></div>
+            <div class="navlink"><a href="index.php">Home</a></div>
+            <div class="navlink"><a href="about.php">About Us</a></div>
         </div>
         <div class="body">
             <p class="bodytext">
                 <?php
-                    $target_dir = "../images/accountpfps/";
+                    include "../reqs/db_connection.php";
+                    $target_dir = "../videos/";
                     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                     $uploadOk = 1;
-                    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                    $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     // check if image file is a actual image or fake image
                     if(isset($_POST["submit"])) {
-                        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-                        if($check !== false) {
+                        $mime = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
+                        if(strstr($mime, "video/")){
                             $uploadOk = 1;
-                        } else {
-                            echo "File is not an image.";
+                        }
+                        else {
+                            echo "File is not a video.";
                             $uploadOk = 0;
                         }
                     }
@@ -55,14 +57,8 @@
                         $uploadOk = 0;
                     }
                     // check file size
-                    if ($_FILES["fileToUpload"]["size"] > 500000) {
-                        echo "Sorry, your file is too large. Files must be under 500kB.";
-                        $uploadOk = 0;
-                    }
-                    // allow certain file formats
-                    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-                        && $imageFileType != "gif" ) {
-                        echo "Sorry, only JPG and PNG files are allowed.";
+                    if ($_FILES["fileToUpload"]["size"] > 1000000000000) {
+                        echo "Sorry, your file is too large. Files must be under 1gb.";
                         $uploadOk = 0;
                     }
                     // check if $uploadOk is set to 0 by an error
@@ -72,16 +68,15 @@
                     } else {
                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                             echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-                            if (file_exists($target_dir . $_COOKIE["username"] . ".png"))
+                            if (file_exists($target_dir . $_COOKIE["username"] . ".mp4"))
                             {
-                                unlink($target_dir . $_COOKIE["username"] . ".png");
+                                unlink($target_dir . $_COOKIE["username"] . ".mp4");
                             }
-                            rename($target_file, $target_dir . $_COOKIE["username"] . ".png");
-                            setcookie("pfp", $target_dir . $_COOKIE["username"] . ".png");
                         } else {
                             echo "Sorry, there was an error uploading your file.";
                         }
                     }
+                    upload_video($_POST["videoTitle"], $_POST["videoTags"]);
                 ?>
             </p>
         </div>

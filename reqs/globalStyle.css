@@ -199,6 +199,26 @@
     outline:none;
 }
 
+.field /* format all the sign in fields */
+{
+    background-color:#202020;
+    border-color:#202020;
+    border-style:solid;
+    border-width:4px;
+    border-radius:4px;
+    font-size:larger;
+    margin-top:8px;
+    color:#d1d1d1;
+    vertical-align: top;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.field:focus /* make sure they dont change when they are focused */
+{
+    border-width:4px;
+    outline:none;
+}
+
 .loginform /* quick margin for the forms */
 {
     margin:16px;

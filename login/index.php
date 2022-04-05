@@ -40,7 +40,7 @@
                             <form method="post" action="../accountcreated/">
                                 <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
                                 <br>
-                                <input class="signinfield" autocomplete="off" placeholder="Email" name="inputEmail" id="inputEmail">
+                                <input class="signinfield" type="email" autocomplete="off" placeholder="Email" name="inputEmail" id="inputEmail">
                                 <br>
                                 <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
                                 <br>

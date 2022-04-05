@@ -22,10 +22,30 @@ function console_log($output, $with_script_tags = true) {
     echo $js_code;
 }
 
+function generateKey($length = 16) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 function create_account($username, $email, $password)
 {
-    $con = OpenCon();
+    $conn = OpenCon();
     $sql = "INSERT INTO `vortexaccounts` (`username`, `email`, `pass`) VALUES ('$username', '$email', '$password');";
-    $rs = mysqli_query($con, $sql);
+    mysqli_query($conn, $sql);
+}
+
+function upload_video($title, $tags)
+{
+    $conn = OpenCon();
+    $username = $_COOKIE["username"];
+    $path = $title . ".mp4";
+    $key = generateKey();
+    $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `videopath`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '$path', '$key', '$tags')";
+    mysqli_query($conn, $sql);
 }
 ?>
