@@ -14,6 +14,7 @@
                 <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
             <?php
+            error_reporting(0);
             if ($_COOKIE["username"] == "")
             { ?>
             <a href="../login/"><button class="inline signin" id="signin">Sign In</button></a>
