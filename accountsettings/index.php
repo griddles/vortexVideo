@@ -36,7 +36,7 @@
         </div>
         <div class="body">
             <a href="../uploadpfp/">
-                <img class="accountpfp" src=../images/masklight.png style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="64px" height="64px">
+                <img class="accountpfp" src=../images/masklight.png style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="64px" height="64px">
             </a>
             <h1 id="accountname" class="inline username">
                 <?php echo $_COOKIE["username"]; ?>

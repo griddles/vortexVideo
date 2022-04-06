@@ -36,15 +36,7 @@
             <div class="navlink"><a href="../about/">About Us</a></div>
         </div>
         <div class="body">
-            <?php 
-                $username = $_GET["username"];
-                if ($username != "")
-                {
-                    setcookie("pfp", "../images/accountpfps/" . $username . ".png");
-                    header("Refresh:0 url=../account/");
-                }
-            ?>
-            <img class="accountpfp" src=../images/masklight.png style="background-image:url('<?php echo $_COOKIE["pfp"]; ?>')" width="64px" height="64px">
+            <img class="accountpfp" src=../images/masklight.png style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="64px" height="64px">
             <h1 id="accountname" class="inline username"><?php echo $_COOKIE["username"]; ?></h1>
             <a href="../accountsettings/"><button class="settings button">Settings</button></a>
             <a href="../uploadvideo/"><button class="settings button">Upload Video</button></a>
