@@ -9,9 +9,10 @@
     <?php
         include '../reqs/db_connection.php';
         error_reporting(0);
-        if (isset($_GET['logout'])) 
+        if (isset($_COOKIE['username']) && $_GET["logout"] == "true") 
         {
-            setcookie("username", "");
+            unset($_COOKIE['username']); 
+            setcookie('username', null, -1, '/'); 
         }
     ?>
     <title>Vortex - Home</title>

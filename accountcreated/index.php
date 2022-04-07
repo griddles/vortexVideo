@@ -1,5 +1,6 @@
 <?php
     include "../reqs/db_connection.php";
+    error_reporting(0);
     $username = $_POST['inputUser'];
     $email = $_POST['inputEmail'];
     $password = $_POST['inputPass'];
