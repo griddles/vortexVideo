@@ -6,7 +6,7 @@
         <link rel="icon" href="../images/vortexLogo.png">
         <script src="../reqs/cookies.js"></script>
     </head>
-    <title>Vortex - Home</title>
+    <title>Vortex - Edit Account</title>
     <body class="default">
         <div class="sticky">
             <a class="inline" href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
