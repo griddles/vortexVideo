@@ -26,6 +26,12 @@
     display:inline-block;
 }
 
+.floating
+{
+    float:right;
+    margin-right:32px;
+}
+
 .searchbar /* the actual searchbar formatting */
 {
     margin-left:6%;

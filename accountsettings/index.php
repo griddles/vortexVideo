@@ -41,15 +41,17 @@
             <h1 id="accountname" class="inline username">
                 <?php echo $_COOKIE["username"]; ?>
             </h1>
+            <br>
+            <br>
             <div>
-                <a href="../home/?logout=true"><button class="button" onclick="signOut()">Sign Out</button></a>
+                <a href="../home/?logout=true"><button class="floating button" onclick="signOut()">Sign Out</button></a>
             </div>
             <form method="post" action="../deleteaccount.php">
                 <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
                 <br>
                 <input class="signinfield" autocomplete="off" type="password" placeholder="Password" name="inputPass" id="inputPass">
                 <br>
-                <input class="button" type="submit" value="Delete Account (broken)">
+                <input class="button" type="submit" value="Delete Account">
             </form>
         </div>
     </body>
