@@ -45,7 +45,7 @@
                     $target_thumb = $_FILES["thumbnail"];
                     $target_thumbname = $target_thumbdir . basename($_FILES["thumbnail"]["name"]);
 
-                    if (upload_file($target_video, $target_videoname, $target_videodir, 1000000000000, "mp4", $_POST["videoTitle"]))
+                    if (upload_file($target_video, $target_videoname, $target_videodir, 1000000000000, "mp4", $key))
                     {
                         $key = generateKey();
                         video_database($_POST["videoTitle"], $_POST["videoTags"], $key);

@@ -29,6 +29,20 @@ function generateKey($length = 16) {
     for ($i = 0; $i < $length; $i++) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
+    $conn = OpenCon();
+    $sql = "SELECT videokey FROM vortexvideos";
+    $sqlresult = $conn->query($sql);
+    $keys = mysqli_fetch_all($sqlresult);
+    $i = 0;
+    foreach ($keys as $key)
+    {
+        if ($key[0] == $randomString)
+        {
+            $randomString = generateKey();
+            break;
+        }
+        $i += 1;
+    }
     return $randomString;
 }
 

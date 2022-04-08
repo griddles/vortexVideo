@@ -10,7 +10,7 @@
         include '../reqs/db_connection.php'; // connect to the database
         error_reporting(0);
         $conn = OpenCon();
-        $sql = "SELECT title, creator, views, videopath FROM vortexvideos"; // yoink the desired values from the database
+        $sql = "SELECT title, creator, views, description, videokey FROM vortexvideos"; // yoink the desired values from the database
         $result = $conn->query($sql);
         
         $key = "SELECT videokey FROM vortexvideos"; // get a list of video keys seperate from the rest of the values
@@ -77,7 +77,7 @@
         <div class="body">
             <div class="video">
                 <video width="69%" height="auto" controls="true">
-                    <source src="../videos/<?php echo $database[$video_num][3]; ?>">
+                    <source src="../videos/<?php echo $database[$video_num][4]; ?>.mp4">
                     your computer is too old to play a video in a browser
                 </video>
                 <div class="inline videodetails">

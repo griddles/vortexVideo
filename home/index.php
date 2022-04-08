@@ -43,7 +43,7 @@
         <div class="body">
             <?php
             $conn = OpenCon(); // connect to the database
-            $sql = "SELECT title, creator, views, videopath, videokey, tags FROM vortexvideos"; // yoink the desired values
+            $sql = "SELECT title, creator, views, description, videokey, tags FROM vortexvideos"; // yoink the desired values
             $result = $conn->query($sql);
             $database = mysqli_fetch_all($result);
             $sorteddatabase = array();
@@ -80,7 +80,6 @@
             {
                 $sorteddatabase = $database;
             }
-
             $i = 0;
             while ($i < count($sorteddatabase)){ // dynamic thumbnails
                 echo "
