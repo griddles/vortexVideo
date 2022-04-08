@@ -86,7 +86,7 @@
                 echo "
                 <div class='inline thumbnail'>
                     <div class='thumbnailfade'>&nbsp</div>
-                    <a href='../video/?v=" . $sorteddatabase[$i][4] . "'><img src='../images/thumbnailPlaceholder.png' width='320' height='auto'></a>
+                    <a href='../video/?v=" . $sorteddatabase[$i][4] . "'><img src='../videos/thumbnails/" . $sorteddatabase[$i][4] . ".png' style='background-image:url(\"../images/thumbnailPlaceholder.png\");' width='320' height='180'></a>
                     <div>
                         <img class='creatoricon' src='../images/maskmid.png' style='background-image:url(\"../images/accountpfps/" . $sorteddatabase[$i][1] . ".png\")' width='32' height='32'>
                         <b>

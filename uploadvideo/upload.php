@@ -36,53 +36,68 @@
             <p class="bodytext">
                 <?php
                     include "../reqs/db_connection.php";
-                    $target_dir = "../videos/";
-                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-                    $uploadOk = 1;
-                    $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                    console_log($fileType);
-                    // check if image file is a actual image or fake image
-                    if(isset($_POST["submit"])) {
-                        $mime = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
-                        if(strstr($mime, "video/")){
-                            $uploadOk = 1;
-                        }
-                        else {
-                            echo "File is not a video.";
-                            $uploadOk = 0;
-                        }
-                    }
-                    // check if file already exists
-                    if (file_exists($target_file)) {
-                        echo "Due to an internal server confliction, your filename conflicted with a different file. Try renaming it. This problem should be fixed in a future update.";
-                        $uploadOk = 0;
-                    }
-                    // check file size
-                    if ($_FILES["fileToUpload"]["size"] > 1000000000000) {
-                        echo "Sorry, your file is too large. Files must be under 1gb.";
-                        $uploadOk = 0;
-                    }
-                    if ($fileType != "mp4")
+                    
+                    $target_videodir = "../videos/";
+                    $target_video = $_FILES["video"];
+                    $target_videoname = $target_videodir . basename($_FILES["video"]["name"]);
+                    
+                    $target_thumbdir = "../videos/thumbnails/";
+                    $target_thumb = $_FILES["thumbnail"];
+                    $target_thumbname = $target_thumbdir . basename($_FILES["thumbnail"]["name"]);
+
+                    if (upload_file($target_video, $target_videoname, $target_videodir, 1000000000000, "mp4", $_POST["videoTitle"]))
                     {
-                        echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
-                        $uploadOk = 0;
+                        $key = generateKey();
+                        video_database($_POST["videoTitle"], $_POST["videoTags"], $key);
                     }
-                    // check if $uploadOk is set to 0 by an error
-                    if ($uploadOk == 0) {
-                        echo "Sorry, there was an unknown error. Try again.";
-                    // if everything is ok, try to upload file
-                    } else {
-                        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                            echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-                            if (file_exists($target_dir . $_COOKIE["username"] . ".mp4"))
-                            {
-                                unlink($target_dir . $_COOKIE["username"] . ".mp4");
-                            }
-                            upload_video($_POST["videoTitle"], $_POST["videoTags"]);
-                        } else {
-                            echo "Sorry, there was an error uploading your file.";
-                        }
-                    }
+
+                    upload_file($target_thumb, $target_thumbname, $target_thumbdir, 1000000000, "png", $key);
+
+                    // $uploadOk = 1;
+                    // $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+                    // console_log($fileType);
+                    // // check if image file is a actual image or fake image
+                    // if(isset($_POST["submit"])) {
+                    //     $mime = mime_content_type($_FILES["video"]["tmp_name"]);
+                    //     if(strstr($mime, "video/")){
+                    //         $uploadOk = 1;
+                    //     }
+                    //     else {
+                    //         echo "File is not a video.";
+                    //         $uploadOk = 0;
+                    //     }
+                    // }
+                    // // check if file already exists
+                    // if (file_exists($target_file)) {
+                    //     echo "Due to an internal server confliction, your filename conflicted with a different file. Try renaming it. This problem should be fixed in a future update.";
+                    //     $uploadOk = 0;
+                    // }
+                    // // check file size
+                    // if ($_FILES["video"]["size"] > 1000000000000) {
+                    //     echo "Sorry, your file is too large. Files must be under 1gb.";
+                    //     $uploadOk = 0;
+                    // }
+                    // if ($fileType != "mp4")
+                    // {
+                    //     echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
+                    //     $uploadOk = 0;
+                    // }
+                    // // check if $uploadOk is set to 0 by an error
+                    // if ($uploadOk == 0) {
+                    //     echo "Sorry, there was an unknown error. Try again.";
+                    // // if everything is ok, try to upload file
+                    // } else {
+                    //     if (move_uploaded_file($_FILES["video"]["tmp_name"], $target_file)) {
+                    //         echo "The file ". htmlspecialchars( basename( $_FILES["video"]["name"])). " has been uploaded.";
+                    //         if (file_exists($target_dir . $_COOKIE["username"] . ".mp4"))
+                    //         {
+                    //             unlink($target_dir . $_COOKIE["username"] . ".mp4");
+                    //         }
+                    //         video_database($_POST["videoTitle"], $_POST["videoTags"]);
+                    //     } else {
+                    //         echo "Sorry, there was an error uploading your file.";
+                    //     }
+                    // }
                 ?>
             </p>
         </div>

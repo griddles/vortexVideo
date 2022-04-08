@@ -38,7 +38,10 @@
                 <br>
                 <textarea class="field" style="width:312px; height:128px; resize:none;" name="videoTags" id="videoTags" placeholder="tags, seperated with '|'"></textarea>
                 <p class="bodytext">Select video to upload:</p>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="video" id="video">
+                <br>
+                <p class="bodytext">Select thumbnail for video:</p>
+                <input type="file" name="thumbnail" id="thumbnail">
                 <br>
                 <input type="submit" value="Upload Video" name="submit" class="button" style="margin-top:16px;">
             </form>
