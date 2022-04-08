@@ -57,8 +57,7 @@ function video_database($title, $tags, $key)
 {
     $conn = OpenCon();
     $username = $_COOKIE["username"];
-    $path = $title . ".mp4";
-    $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `videopath`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '$path', '$key', '$tags')";
+    $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `description`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '', '$key', '$tags')";
     mysqli_query($conn, $sql);
 }
 

@@ -78,7 +78,7 @@
             <div class="video">
                 <video width="69%" height="auto" controls="true">
                     <source src="../videos/<?php echo $database[$video_num][4]; ?>.mp4">
-                    your computer is too old to play a video in a browser
+                    lol your computer is too old to play a video in a browser
                 </video>
                 <div class="inline videodetails">
                     <h2 class="videotitle">
@@ -96,6 +96,11 @@
                             echo $database[$video_num][2]; // etc.
                         ?>
                         views
+                    </p>
+                    <p>
+                        <?php
+                            echo $database[$video_num][3];
+                        ?>
                     </p>
                     <?php
                         CloseCon($conn);

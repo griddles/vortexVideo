@@ -43,7 +43,7 @@
             <div>
                 <?php
                     $conn = OpenCon();
-                    $sql = "SELECT title, creator, views, videopath, videokey FROM vortexvideos"; // yoink the desired values from the database
+                    $sql = "SELECT title, creator, views, description, videokey FROM vortexvideos"; // yoink the desired values from the database
                     $result = $conn->query($sql);
                     $database = mysqli_fetch_all($result);
                     
