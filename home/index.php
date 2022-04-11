@@ -97,6 +97,7 @@
                 ";
                 $i += 1;
             }
+            CloseCon($conn);
             ?>
         </div>
     </body>

@@ -49,6 +49,7 @@ function create_account($username, $email, $password)
     $conn = OpenCon();
     $sql = "INSERT INTO `vortexaccounts` (`username`, `email`, `pass`) VALUES ('$username', '$email', '$password');";
     mysqli_query($conn, $sql);
+    CloseCon($conn);
 }
 
 function video_database($title, $desc, $tags, $key)
@@ -57,6 +58,7 @@ function video_database($title, $desc, $tags, $key)
     $username = $_COOKIE["username"];
     $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `description`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '$desc', '$key', '$tags')";
     mysqli_query($conn, $sql);
+    CloseCon($conn);
 }
 
 function upload_file($target_file, $target_filename, $target_dir, $max_filesize, $file_type, $final_name)

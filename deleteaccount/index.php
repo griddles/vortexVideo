@@ -69,4 +69,5 @@
         console_log("deleted.");
         header('Location: deleted.php');
     }
+    CloseCon($conn);
 ?>

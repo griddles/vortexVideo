@@ -95,7 +95,7 @@
             <div class="navlink"><a href="../home/">Home</a></div>
             <div class="navlink"><a href="../about/">About Us</a></div>
         </div>
-        <div id="username" style="display:none;"><?php echo $username; ?></div>
+        <div id="username" style="display:none;"><?php echo $username; CloseCon($conn); ?></div>
         <div class="body">
             <h3>Successfully Signed In</h3>
             <h4>Redirecting...</h4>
