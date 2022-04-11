@@ -61,7 +61,6 @@ function video_database($title, $desc, $tags, $key)
 
 function upload_file($target_file, $target_filename, $target_dir, $max_filesize, $file_type, $final_name)
 {
-    $uploadOk = 1;
     $fileType = strtolower(pathinfo($target_filename, PATHINFO_EXTENSION));
     console_log($fileType);
     // check if file already exists
