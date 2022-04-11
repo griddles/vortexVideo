@@ -68,34 +68,31 @@ function upload_file($target_file, $target_filename, $target_dir, $max_filesize,
     if (file_exists($target_filename)) 
     {
         echo "How the hell did you get this? Your video file somehow had the exact same name as one of the others in our database, which are 16 character randomized strings, of which there are 47 octillion different possibilities. You should probably contact us about this, it definitely should not happen.";
-        $uploadOk = 0;
     }
-    // check file size
-    if ($target_file["size"] > $max_filesize) 
+    else
     {
-        echo "Sorry, your file is too large. Files must be under 1gb.";
-        $uploadOk = 0;
-    }
-    if ($fileType != $file_type)
-    {
-        echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
-        $uploadOk = 0;
-    }
-    // check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-        echo "Sorry, there was an unknown error. Try again.";
-    // if everything is ok, try to upload file
-    } 
-    else 
-    {
-        if (move_uploaded_file($target_file["tmp_name"], $target_filename)) 
+        if ($target_file["size"] > $max_filesize) 
         {
-            rename($target_filename, $target_dir . $final_name . "." . $file_type);
-            return true;
-        } 
-        else 
+            echo "Sorry, your file is too large. Files must be under 1gb.";
+        }
+        else
         {
-            return false;
+            if ($fileType != $file_type)
+            {
+                echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
+            }
+            else
+            {
+                if (move_uploaded_file($target_file["tmp_name"], $target_filename)) 
+                {
+                    rename($target_filename, $target_dir . $final_name . "." . $file_type);
+                    return true;
+                } 
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }
