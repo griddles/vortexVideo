@@ -4,7 +4,6 @@
         <meta name="viewport" content="width=device; initial=scale:1.0;">
         <link rel="stylesheet" href="../reqs/globalStyle.css">
         <link rel="icon" href="../images/vortexLogo.png">
-        <script src="../reqs/cookies.js"></script>
     </head>
     <title>Vortex - Uploading...</title>
     <body class="default">
@@ -52,52 +51,6 @@
                     }
 
                     upload_file($target_thumb, $target_thumbname, $target_thumbdir, 1000000000, "png", $key);
-
-                    // $uploadOk = 1;
-                    // $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                    // console_log($fileType);
-                    // // check if image file is a actual image or fake image
-                    // if(isset($_POST["submit"])) {
-                    //     $mime = mime_content_type($_FILES["video"]["tmp_name"]);
-                    //     if(strstr($mime, "video/")){
-                    //         $uploadOk = 1;
-                    //     }
-                    //     else {
-                    //         echo "File is not a video.";
-                    //         $uploadOk = 0;
-                    //     }
-                    // }
-                    // // check if file already exists
-                    // if (file_exists($target_file)) {
-                    //     echo "Due to an internal server confliction, your filename conflicted with a different file. Try renaming it. This problem should be fixed in a future update.";
-                    //     $uploadOk = 0;
-                    // }
-                    // // check file size
-                    // if ($_FILES["video"]["size"] > 1000000000000) {
-                    //     echo "Sorry, your file is too large. Files must be under 1gb.";
-                    //     $uploadOk = 0;
-                    // }
-                    // if ($fileType != "mp4")
-                    // {
-                    //     echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
-                    //     $uploadOk = 0;
-                    // }
-                    // // check if $uploadOk is set to 0 by an error
-                    // if ($uploadOk == 0) {
-                    //     echo "Sorry, there was an unknown error. Try again.";
-                    // // if everything is ok, try to upload file
-                    // } else {
-                    //     if (move_uploaded_file($_FILES["video"]["tmp_name"], $target_file)) {
-                    //         echo "The file ". htmlspecialchars( basename( $_FILES["video"]["name"])). " has been uploaded.";
-                    //         if (file_exists($target_dir . $_COOKIE["username"] . ".mp4"))
-                    //         {
-                    //             unlink($target_dir . $_COOKIE["username"] . ".mp4");
-                    //         }
-                    //         video_database($_POST["videoTitle"], $_POST["videoTags"]);
-                    //     } else {
-                    //         echo "Sorry, there was an error uploading your file.";
-                    //     }
-                    // }
                 ?>
             </p>
         </div>

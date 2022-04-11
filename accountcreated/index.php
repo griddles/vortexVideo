@@ -10,7 +10,6 @@
 <head>
         <link rel="stylesheet" href="../reqs/globalStyle.css">
         <link rel="icon" href="../images/vortexLogo.png">
-        <script src="../reqs/cookies.js"></script>
         <meta http-equiv = "refresh" content = "3; url = ../account/"/>
     </head>
     <title>Vortex - Account Created</title>

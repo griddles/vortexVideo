@@ -38,7 +38,6 @@
                 <meta name='viewport' content='width=device; initial=scale:1.0;'>
                 <link rel='stylesheet' href='../reqs/globalStyle.css'>
                 <link rel='icon' href='../images/vortexLogo.png'>
-            <script src='../reqs/cookies.js'></script>
             </head>
             <title>Vortex - Logged In</title>
             <body class='default'>
