@@ -53,11 +53,11 @@ function create_account($username, $email, $password)
     mysqli_query($conn, $sql);
 }
 
-function video_database($title, $tags, $key)
+function video_database($title, $desc, $tags, $key)
 {
     $conn = OpenCon();
     $username = $_COOKIE["username"];
-    $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `description`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '', '$key', '$tags')";
+    $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `description`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '$desc', '$key', '$tags')";
     mysqli_query($conn, $sql);
 }
 

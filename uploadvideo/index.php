@@ -35,7 +35,9 @@
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <input type="text" class="field" style="width:312px;" name="videoTitle" id="videoTitle" placeholder="Video Title">
                 <br>
-                <textarea class="field" style="width:312px; height:128px; resize:none;" name="videoTags" id="videoTags" placeholder="tags, seperated with '|'"></textarea>
+                <textarea class="field" style="width:312px; height:256px; resize:none;" name="videoDesc" id="videoDesc" placeholder="Video Description"></textarea>
+                <br>
+                <textarea class="field" style="width:312px; height:128px; resize:none;" name="videoTags" id="videoTags" placeholder="tags, seperated with ','"></textarea>
                 <p class="bodytext">Select video to upload:</p>
                 <input type="file" name="video" id="video">
                 <br>
