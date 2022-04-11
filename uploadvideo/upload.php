@@ -51,9 +51,20 @@
                     if (upload_file($target_video, $target_videoname, $target_videodir, 1000000000000, "mp4", $key))
                     {
                         video_database($_POST["videoTitle"], $_POST["videoDesc"], $video_tags, $key);
+                        if (upload_file($target_thumb, $target_thumbname, $target_thumbdir, 1000000000, "png", $key))
+                        {
+                            echo "Video " . $target_videoname . " was uploaded successfully.";
+                        }
+                        else
+                        {
+                            echo "There was an unknown error uploading the thumbnail for your video. Your video will still work, but won't have a thumbnail until you give it one.";
+                        }
                     }
-
-                    upload_file($target_thumb, $target_thumbname, $target_thumbdir, 1000000000, "png", $key);
+                    else
+                    {
+                        echo "There was an unknown error uploading your video, please try again. If this error persists, contact customer support.";
+                    }
+                    
                 ?>
             </p>
         </div>
