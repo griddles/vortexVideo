@@ -67,7 +67,7 @@ function upload_file($target_file, $target_filename, $target_dir, $max_filesize,
     // check if file already exists
     if (file_exists($target_filename)) 
     {
-        echo "Due to an internal server confliction, your filename conflicted with a different file. Try renaming it. This problem should be fixed in a future update.";
+        echo "How the hell did you get this? Your video file somehow had the exact same name as one of the others in our database, which are 16 character randomized strings, of which there are 47 octillion different possibilities. You should probably contact us about this, it definitely should not happen.";
         $uploadOk = 0;
     }
     // check file size
