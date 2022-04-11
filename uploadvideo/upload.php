@@ -46,9 +46,10 @@
 
                     $video_tags = str_replace(",", "|", $_POST["videoTags"]);
 
+                    $key = generateKey();
+
                     if (upload_file($target_video, $target_videoname, $target_videodir, 1000000000000, "mp4", $key))
                     {
-                        $key = generateKey();
                         video_database($_POST["videoTitle"], $_POST["videoDesc"], $video_tags, $key);
                     }
 
