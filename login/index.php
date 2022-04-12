@@ -38,9 +38,9 @@
                         <div class="loginform">
                             <h2>Log In</h2>
                             <form method="post" action="../loggedin/">
-                                <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
+                                <input class="signinfield" autocomplete="off" placeholder="Username" name="loginUser" id="loginUser">
                                 <br>
-                                <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
+                                <input class="signinfield" type="password" placeholder="Password" name="loginPass" id="loginPass">
                                 <br>
                                 <input class="button" type="submit" value="Log In">
                             </form>
@@ -50,11 +50,11 @@
                         <div class="registerform">
                             <h2>Create Account</h2>
                             <form method="post" action="../accountcreated/">
-                                <input class="signinfield" autocomplete="off" placeholder="Username" name="inputUser" id="inputUser">
+                                <input class="signinfield" autocomplete="off" placeholder="Username" name="accUser" id="accUser">
                                 <br>
-                                <input class="signinfield" type="email" autocomplete="off" placeholder="Email" name="inputEmail" id="inputEmail">
+                                <input class="signinfield" type="email" autocomplete="off" placeholder="Email" name="accEmail" id="accEmail">
                                 <br>
-                                <input class="signinfield" type="password" placeholder="Password" name="inputPass" id="inputPass">
+                                <input class="signinfield" type="password" placeholder="Password" name="accPass" id="accPass">
                                 <br>
                                 <input class="button" type="submit" value="Sign Up">
                             </form>

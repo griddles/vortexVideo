@@ -1,9 +1,9 @@
 <?php
     include "../reqs/db_connection.php";
     error_reporting(0);
-    $username = $_POST['inputUser'];
-    $email = $_POST['inputEmail'];
-    $password = $_POST['inputPass'];
+    $username = $_POST['accUser'];
+    $email = $_POST['accEmail'];
+    $password = $_POST['accPass'];
     create_account($username, $email, $password);
 ?>
 <html>
