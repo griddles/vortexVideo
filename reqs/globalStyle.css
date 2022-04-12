@@ -26,7 +26,7 @@
     display:inline-block;
 }
 
-.floating
+.floating /* make stuff float on the right side of the screen */
 {
     float:right;
     margin-right:32px;
