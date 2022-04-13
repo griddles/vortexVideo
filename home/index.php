@@ -86,12 +86,15 @@
                     <div class="thumbnailfade"></div>
                     <a href="../video/?v=<?php echo $sorteddatabase[$i][4]; ?>"><img src="../videos/thumbnails/<?php echo $sorteddatabase[$i][4]; ?>.png" style="background-image:url(\'../images/thumbnailPlaceholder.png\');" width="320" height="180"></a>
                     <div>
-                        <img class="creatoricon" src="../images/maskmid.png" style="background-image:url('../images/accountpfps/<?php echo $sorteddatabase[$i][1]; ?>.png\')" width="32" height="32">
+                        <img class="creatoricon" src="../images/maskmid.png" style="background-image:url('../images/accountpfps/<?php echo $sorteddatabase[$i][1]; ?>.png')" width="32" height="32">
                         <b>
                             <div class="inline thumbnailtitle" title="<?php echo $sorteddatabase[$i][0]; ?>" style="width:280px; text-overflow:ellipsis; overflow:auto;">
                                 <?php echo $sorteddatabase[$i][0]; ?>
                             </div>
                         </b>
+                        <div class="inline thumbnailcreator">
+                            <?php echo $sorteddatabase[$i][1]; ?>
+                        </div>
                     </div>
                 </div>
                 <?php

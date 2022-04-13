@@ -134,6 +134,13 @@
     vertical-align:middle;
 }
 
+.thumbnailcreator
+{
+    font-size:smaller;
+    color:#696969;
+    margin-left:8px;
+}
+
 .videotable /*spacing for the hidden table that organizes videos*/
 {
     border-spacing:32px;
