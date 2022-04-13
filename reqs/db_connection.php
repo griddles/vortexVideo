@@ -80,7 +80,7 @@ function upload_file($target_file, $target_filename, $target_dir, $max_filesize,
         {
             if ($fileType != $file_type)
             {
-                echo "Sorry, the file must be in an .mp4 format. More formats will be added in the future.";
+                echo "Sorry, the file must be in an " . $file_type . " format. More formats will be added in the future.";
             }
             else
             {
