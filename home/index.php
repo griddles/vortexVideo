@@ -88,7 +88,7 @@
                     <div>
                         <img class="creatoricon" src="../images/maskmid.png" style="background-image:url('../images/accountpfps/<?php echo $sorteddatabase[$i][1]; ?>.png')" width="32" height="32">
                         <b>
-                            <div class="inline thumbnailtitle" title="<?php echo $sorteddatabase[$i][0]; ?>" style="width:280px; text-overflow:ellipsis; overflow:auto;">
+                            <div class="inline thumbnailtitle" title="<?php echo $sorteddatabase[$i][0]; ?>" style="width:280px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
                                 <?php echo $sorteddatabase[$i][0]; ?>
                             </div>
                         </b>
