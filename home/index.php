@@ -63,8 +63,10 @@
                         console_log($tags[$j]);
                         if ($searchtag == $tags[$j])
                         {
-                            array_push($sorteddatabase, $database[$i]);
-                            break;
+                            if (!in_array($database[$i], $sorteddatabase))
+                            {
+                                array_push($sorteddatabase, $database[$i]);
+                            }
                         }
                         $j += 1;
                     }
