@@ -48,10 +48,10 @@
 
                     $key = generateKey();
 
-                    if (upload_file($target_video, $target_videoname, $target_videodir, 1000000000000, "mp4", $key))
+                    if (upload_file($target_video, $target_videoname, $target_videodir, 10000000000, "mp4", $key))
                     {
                         video_database($_POST["videoTitle"], $_POST["videoDesc"], $video_tags, $key);
-                        if (upload_file($target_thumb, $target_thumbname, $target_thumbdir, 1000000000, "png", $key))
+                        if (upload_file($target_thumb, $target_thumbname, $target_thumbdir, 100000000, "png", $key))
                         {
                             echo "Video " . $target_videoname . " was uploaded successfully.";
                         }
