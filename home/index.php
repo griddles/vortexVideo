@@ -54,7 +54,7 @@
                 console_log($searchtag);
                 echo "<h3>Searching for " . $searchtag . ":</h3>";
                 console_log(count($database));
-                while ($i < count($database))
+                while ($i <= count($database))
                 {
                     $tags = explode("|", $database[$i][5]); //i know i could use str_contains here, but that'll 
                     $j = 0;                         //return true if the video has a tag of 'epicgamingmoment'  
