@@ -59,6 +59,7 @@
                     $j = 0;                         //return true if the video has a tag of 'epicgamingmoment'  
                     while ($j < count($tags)) //and the user searches 'cgami'.
                     {
+                        console_log($tags[$j]);
                         if ($searchtag == $tags[$j])
                         {
                             array_push($sorteddatabase, $database[$i]);
@@ -66,6 +67,7 @@
                         }
                         $j += 1;
                     }
+                    console_log($database[$i][0]);
                     if (str_contains(strtolower($database[$i][0]), strtolower($searchtag)))
                     {
                         if (!in_array($database[$i], $sorteddatabase))
