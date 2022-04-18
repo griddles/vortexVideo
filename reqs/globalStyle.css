@@ -19,6 +19,7 @@
     top:0;
     z-index:3;
     background-color:#202020;
+    display:flex;
 }
 
 .inline /* anything inline with other items, eg. the logo and searchbar */
@@ -35,12 +36,10 @@
 .searchbar /* the actual searchbar formatting */
 {
     margin-left:6%;
-    width:40%;
+    width:80%;
     font-size:larger;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    position: relative;
+    top: 32%;
     background-color:#404040;
     border-width:8px;
     border-style:solid;
@@ -53,6 +52,24 @@
 {
     border-width:8px;
     outline:none;
+}
+
+.searchform
+{
+    width:100%;
+    height:100px;
+}
+
+.account
+{
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
+}
+
+.accountbox
+{
+    width:256px;
+    flex-shrink:0;
 }
 
 .signin /* for the sign in fields */
