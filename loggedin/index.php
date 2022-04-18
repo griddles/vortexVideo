@@ -30,7 +30,7 @@
             }
         }
     }
-    if ($usernamevalid != true)
+    if ($usernamevalid != true) // this echo comment code stuff is unneccessary, see home page for a better way to do this
     {
         echo "
         <html>

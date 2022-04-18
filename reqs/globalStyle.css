@@ -54,19 +54,19 @@
     outline:none;
 }
 
-.searchform
+.searchform /* make the container of the searchbar properly sized */
 {
     width:100%;
     height:100px;
 }
 
-.account
+.account /* properly position the account/pfp */
 {
     -ms-transform: translateY(-35%);
     transform: translateY(-35%);
 }
 
-.accountbox
+.accountbox /* container for the account/pfp */
 {
     width:256px;
     flex-shrink:0;

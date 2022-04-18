@@ -5,6 +5,7 @@
     $email = $_POST['accEmail'];
     $password = $_POST['accPass'];
     create_account($username, $email, $password);
+    setcookie("username", $username, 0, "/");
 ?>
 <html>
 <head>

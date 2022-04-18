@@ -17,7 +17,7 @@
 
         $video_key = $_GET["v"];
 
-        $database = mysqli_fetch_all($result); // grab the entire database (probably a really bad idea, there's definitely a better way to do this)
+        $database = mysqli_fetch_all($result); // grab the entire database
 
         $keys = mysqli_fetch_all($keyresult); // grab all the keys from the database
         $video_num = null; // set up some variables for the foreach loop
@@ -30,14 +30,14 @@
             }
             $i += 1;
         }
-        if ($video_num == null)
+        if ($video_num == null) // error handling (need to update)
         {
             echo "
             <body class='default'>
                 <div class='body'>
                     <h1>Video ID error</h1>
                     <h3>" . $video_key . " is not a valid video ID</h3>
-                    <h4>The video you're looking for isn't here, it may have been removed.</h4>
+                    <h4>The video you're looking for isn't here, it may have been removed or set to private.</h4>
                 </div>
             </body>
             ";

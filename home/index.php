@@ -8,7 +8,7 @@
     <?php
         include '../reqs/db_connection.php';
         error_reporting(0);
-        if (isset($_COOKIE['username']) && $_GET["logout"] == "true") 
+        if (isset($_COOKIE['username']) && $_GET["logout"] == "true") // properly sign the user out
         {
             unset($_COOKIE['username']); 
             setcookie('username', null, -1, '/'); 
@@ -47,34 +47,34 @@
         <div class="body">
             <?php
             $conn = OpenCon(); // connect to the database
-            $sql = "SELECT title, creator, views, description, videokey, tags FROM vortexvideos"; // yoink the desired values
-            $result = $conn->query($sql);
-            $database = mysqli_fetch_all($result);
-            $sorteddatabase = array();
+            $sql = "SELECT title, creator, views, description, videokey, tags FROM vortexvideos"; // sql string for the values we want
+            $result = $conn->query($sql); // yoink them values
+            $database = mysqli_fetch_all($result); // make the data actually usable
+            $sorteddatabase = array(); // new array for sorting the database if we're currently searching for something
 
-            $searchtag = $_POST['searchbar'];
+            $searchtag = $_POST['searchbar']; // grab the value the user searched for, if there is one
             $i = 0;
             if ($searchtag != null)
             {
                 echo "<h3>Searching for " . $searchtag . ":</h3>";
                 while ($i < count($database))
                 {
-                    $tags = explode("|", $database[$i][5]); //i know i could use str_contains here, but that'll 
-                    $j = 0;                         //return true if the video has a tag of 'epicgamingmoment'  
-                    while ($j < count($tags)) //and the user searches 'cgami'.
+                    $tags = explode("|", $database[$i][5]); // seperate all the tags into an array so we can iterate through them later
+                    $j = 0;
+                    while ($j < count($tags)) // later is now
                     {
                         if ($searchtag == $tags[$j])
                         {
-                            if (!in_array($database[$i], $sorteddatabase))
+                            if (!in_array($database[$i], $sorteddatabase)) // make sure we're not adding duplicate values (probably unnecessary here but good practice)
                             {
                                 array_push($sorteddatabase, $database[$i]);
                             }
                         }
                         $j += 1;
                     }
-                    if (str_contains(strtolower($database[$i][0]), strtolower($searchtag)))
+                    if (str_contains(strtolower($database[$i][0]), strtolower($searchtag))) // do a raw strcontains() to search the title for any matching characters
                     {
-                        if (!in_array($database[$i], $sorteddatabase))
+                        if (!in_array($database[$i], $sorteddatabase)) // now we actually need to make sure the matching video hasn't been added by the tag search function yet
                         {
                             array_push($sorteddatabase, $database[$i]);
                         }
@@ -84,7 +84,7 @@
             }
             else
             {
-                $sorteddatabase = $database;
+                $sorteddatabase = $database; // if we aren't searching, set the sorted database to the raw database
             }
             $i = 0;
             while ($i < count($sorteddatabase)){ // dynamic thumbnails
@@ -107,7 +107,7 @@
                 <?php
                 $i += 1;
             }
-            CloseCon($conn);
+            CloseCon($conn); // make sure to close the connection, not actually sure what this does but i think its good
             ?>
         </div>
     </body>
