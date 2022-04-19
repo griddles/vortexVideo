@@ -81,7 +81,7 @@
         <div class="body">
             <div class="video">
                 <video width="69%" height="auto" controls="true">
-                    <source src="../videos/<?php echo $database[$video_num][4]; ?>.mp4">
+                    <source src="../videos/<?php echo $database[$video_num][4]; ?>.mp4"> <!-- error handling for an error that nobody will ever get because only 3 people use internet explorer anyway, and this requires an old version of it to actually get the error lmao -->
                     lol your computer is too old to play a video in a browser
                 </video>
                 <div class="inline videodetails">
