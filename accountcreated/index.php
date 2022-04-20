@@ -1,14 +1,14 @@
 <?php
     include "../reqs/db_connection.php";
     error_reporting(0);
-    $username = $_POST['accUser'];
+    $username = $_POST['accUser']; // grab the data from the form on the previous page (login)
     $email = $_POST['accEmail'];
     $password = $_POST['accPass'];
-    create_account($username, $email, $password);
-    setcookie("username", $username, 0, "/");
+    create_account($username, $email, $password); // run the db_connection function to create an account
+    setcookie("username", $username, 0, "/"); // set the username cookie to keep the user logged in for this session (if we dont have the / at the end it totally breaks)
 ?>
 <html>
-<head>
+    <head>
         <link rel="stylesheet" href="../reqs/globalStyle.css">
         <link rel="icon" href="../images/vortexLogo.png">
         <meta http-equiv = "refresh" content = "3; url = ../account/"/>

@@ -22,7 +22,7 @@
             }
         }
     }
-    if ($usernamevalid != true)
+    if ($usernamevalid != true) // need to replace this echoed html with proper html
     {
         echo "
         <!DOCTYPE html>
@@ -55,10 +55,10 @@
     }
     else
     {
-        $deletesql = "DELETE FROM `vortexaccounts` WHERE `vortexaccounts`.`username` = '$username'";
-        console_log("starting deletion process for " . $username);
+        $deletesql = "DELETE FROM `vortexaccounts` WHERE `vortexaccounts`.`username` = '$username'"; // sql code for deleting a record
+        console_log("starting deletion process for " . $username); // THERE IS A DIFFERENCE BETWEEN ` AND ' !!! IF YOU USE THE WRONG ONE IT BREAKS EVERYTHING! I SPENT 3 DAYS TRYING TO FIX A PROBLEM WHERE I USED THE WRONG ` OR ' !!!
         console_log($deletesql);
-        if($conn->query($deletesql) === TRUE)
+        if($conn->query($deletesql) === TRUE) // run the actual deletion code
         {  
             echo "Record deleted successfully";  
         }
@@ -66,8 +66,7 @@
         {
             echo "Could not deleted record: ". mysqli_error($conn);  
         } 
-        console_log("deleted.");
-        header('Location: deleted.php');
+        header('Location: deleted.php'); // redirect
     }
     CloseCon($conn);
 ?>

@@ -8,11 +8,11 @@
     console_log($username . $password);
     
     $conn = OpenCon();
-    $sql = "SELECT username, email, pass FROM vortexaccounts";
+    $sql = "SELECT username, email, pass FROM vortexaccounts"; // do all the grabbing of data from the database
     $result = $conn->query($sql);
     $logins = mysqli_fetch_all($result);
 
-    $usersql = "SELECT username FROM vortexaccounts";
+    $usersql = "SELECT username FROM vortexaccounts"; // get the username individually, so we can iterate through just the usernames later
     $userresult = $conn->query($usersql);
     $users = mysqli_fetch_all($userresult);
 

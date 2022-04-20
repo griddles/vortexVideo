@@ -43,7 +43,7 @@
                     $target_filename = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-                    upload_file($target_file, $target_filename, $target_dir, 1000000, "png", $_COOKIE["username"]);
+                    upload_file($target_file, $target_filename, $target_dir, 1000000, "png", $_COOKIE["username"]); // upload a new pfp, pretty simple
                 ?>
             </p>
         </div>

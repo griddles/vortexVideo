@@ -42,24 +42,24 @@
                     
                     $target_videodir = "../videos/";
                     $target_video = $_FILES["video"];
-                    $target_videoname = $target_videodir . basename($_FILES["video"]["name"]);
+                    $target_videoname = $target_videodir . basename($_FILES["video"]["name"]); // grab all the required info for uploading the video
                     
                     $target_thumbdir = "../videos/thumbnails/";
                     $target_thumb = $_FILES["thumbnail"];
-                    $target_thumbname = $target_thumbdir . basename($_FILES["thumbnail"]["name"]);
+                    $target_thumbname = $target_thumbdir . basename($_FILES["thumbnail"]["name"]); // same but for the thumbnail
 
                     $video_tags = str_replace(",", "|", $_POST["videoTags"]);
 
                     $key = generateKey();
 
-                    if (upload_file($target_video, $target_videoname, $target_videodir, 10000000000, "mp4", $key))
+                    if (upload_file($target_video, $target_videoname, $target_videodir, 10000000000, "mp4", $key)) // run the upload for the video file
                     {
-                        video_database($_POST["videoTitle"], $_POST["videoDesc"], $video_tags, $key);
-                        if (upload_file($target_thumb, $target_thumbname, $target_thumbdir, 100000000, "png", $key))
-                        {
+                        video_database($_POST["videoTitle"], $_POST["videoDesc"], $video_tags, $key); // put the video in the database
+                        if (upload_file($target_thumb, $target_thumbname, $target_thumbdir, 100000000, "png", $key)) // upload the thumbnail file
+                        { // we dont need a database entry for the thumbnail since the title is the key of the video, we can just reference $key.png, where $key is the key from the video record
                             echo "Video " . $target_videoname . " was uploaded successfully.";
                         }
-                        else
+                        else // error handling
                         {
                             echo "There was an unknown error uploading the thumbnail for your video. Your video will still work, but won't have a thumbnail until you give it one.";
                         }

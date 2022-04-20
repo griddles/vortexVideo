@@ -49,7 +49,7 @@
     <title>Vortex - <?php
         echo $database[$video_num][0];
     ?></title>
-    <body class="default" onload="getUser()">
+    <body class="default">
         <div class="sticky">
             <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
             <form class="searchform" method="post" action="index.php">

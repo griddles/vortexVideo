@@ -6,12 +6,12 @@ function OpenCon()
     $dbpass = "test1234";
     $db = "vortexvideos";
     $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
-    return $conn;
+    return $conn; // make a connection to the database and return it
 }
 
 function CloseCon($conn)
 {
-    $conn -> close();
+    $conn -> close(); // idk why i have this here, could just call this one line every time, but i guess typing '->' is kinda annoying
 }
 
 function console_log($output, $with_script_tags = true) {
@@ -19,7 +19,7 @@ function console_log($output, $with_script_tags = true) {
     if ($with_script_tags) {
         $js_code = '<script>' . $js_code . '</script>';
     }
-    echo $js_code;
+    echo $js_code; // use javascript to do a console_log
 }
 
 function generateKey($length = 16) {
