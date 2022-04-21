@@ -72,9 +72,7 @@
         {
             $video_num -= 1;
     ?>
-    <title>Vortex - <?php
-        echo $database[$video_num][0];
-    ?></title>
+    <title>Vortex - <?php echo $database[$video_num][0]; ?></title>
     <body class="default">
         <div class="sticky">
             <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>

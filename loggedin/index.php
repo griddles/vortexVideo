@@ -39,7 +39,7 @@
                 <link rel="stylesheet" href="../reqs/globalStyle.css">
                 <link rel="icon" href="../images/vortexLogo.png">
             </head>
-            <title>Vortex - About Us</title>
+            <title>Vortex - Logged In</title>
             <body class="default">
                 <div class="sticky">
                     <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>

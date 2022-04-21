@@ -6,7 +6,7 @@
         <link rel="icon" href="../images/vortexLogo.png">
         <meta http-equiv="refresh" content="2; URL=../home/?logout=true"/>
     </head>
-    <title>Vortex - Home</title>
+    <title>Vortex - Account Deleted</title>
     <body class="default">
         <div class="sticky">
             <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
