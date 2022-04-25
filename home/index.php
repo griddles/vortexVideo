@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device; initial=scale:1.0;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../reqs/globalStyle.css">
         <link rel="icon" href="../images/vortexLogo.png">
     </head>
@@ -17,7 +17,7 @@
     <title>Vortex - Home</title>
     <body class="default">
         <div class="sticky">
-            <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
+            <a href="../home/" style="margin-left:16px"><img src="../images/vortexFullLogo.png" alt="vortex logo" width="240px" height="auto"></a>
             <form class="searchform" method="post" action="index.php">
                 <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
             </form>
@@ -33,7 +33,7 @@
                     else
                     { ?>
                     <a href="../account/"><button class="signin" id="account">Account</button><a>
-                    <img class="pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="48px" height="48px">
+                    <img class="pfp" id="pfp" alt="profile picture" src="../images/maskdark.png" style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="48px" height="48px">
                     <?php
                     }
                     ?>
@@ -91,9 +91,9 @@
                 ?>
                 <div class="inline thumbnail">
                     <div class="thumbnailfade"></div>
-                    <a href="../video/?v=<?php echo $sorteddatabase[$i][4]; ?>"><img src="../videos/thumbnails/<?php echo $sorteddatabase[$i][4]; ?>.png" style="background-image:url(\'../images/thumbnailPlaceholder.png\');" width="320" height="180"></a>
+                    <a href="../video/?v=<?php echo $sorteddatabase[$i][4]; ?>"><img src="../videos/thumbnails/<?php echo $sorteddatabase[$i][4]; ?>.jpg" alt="video thumbnail" style="background-image:url('../images/thumbnailPlaceholder.png');" width="320" height="180"></a>
                     <div>
-                        <img class="creatoricon" src="../images/maskmid.png" style="background-image:url('../images/accountpfps/<?php echo $sorteddatabase[$i][1]; ?>.png')" width="32" height="32">
+                        <img class="creatoricon" src="../images/maskmid.png" alt="creator icon" style="background-image:url('../images/accountpfps/<?php echo $sorteddatabase[$i][1]; ?>.png')" width="32" height="32">
                         <b>
                             <div class="inline thumbnailtitle" title="<?php echo $sorteddatabase[$i][0]; ?>" style="width:280px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
                                 <?php echo $sorteddatabase[$i][0]; ?>

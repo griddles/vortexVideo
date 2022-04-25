@@ -15,7 +15,7 @@
             <div class="accountbox">
                 <div class="account">
                     <?php
-                    error_reporting(0);
+                    error_reporting(1);
                     if ($_COOKIE["username"] == "")
                     { ?>
                     <a href="../login/"><button class="signin" id="signin">Sign In</button></a>
@@ -58,6 +58,8 @@
                         if (upload_file($target_thumb, $target_thumbname, $target_thumbdir, 100000000, "png", $key)) // upload the thumbnail file
                         { // we dont need a database entry for the thumbnail since the title is the key of the video, we can just reference $key.png, where $key is the key from the video record
                             echo "Video " . $target_videoname . " was uploaded successfully.";
+                            compress("../videos/thumbnails/" . $key . ".png", "../videos/thumbnails/" . $key . ".jpg", 32);
+                            unlink("../videos/thumbnails/" . $key . "/png");
                         }
                         else // error handling
                         {
