@@ -8,8 +8,8 @@
     console_log($username . $password);
     
     $conn = OpenCon();
-    $sql = "SELECT username, email, pass FROM vortexaccounts"; // do all the grabbing of data from the database
-    $result = $conn->query($sql);
+    $sql = "SELECT username, email, pass FROM vortexaccounts"; // do all the grabbing of data from the database. this is super inefficient but does prevent SQL injection. 
+    $result = $conn->query($sql); // probably should switch this for something else that is also secure but won't kill the databases.
     $logins = mysqli_fetch_all($result);
 
     $usersql = "SELECT username FROM vortexaccounts"; // get the username individually, so we can iterate through just the usernames later
