@@ -123,7 +123,7 @@ function get_invalid_characters($str)
     {
         if (str_contains($str, $char))
         {
-            return false;
+            return true;
         }
     }
 }

@@ -4,7 +4,7 @@
     $username = $_POST['accUser']; // grab the data from the form on the previous page (login)
     $email = $_POST['accEmail'];
     $password = $_POST['accPass'];
-    if (!get_invalid_characters($username))
+    if (get_invalid_characters($username))
     {
         ?>
         <!DOCTYPE html>
@@ -51,7 +51,7 @@
 </html>
         <?php
     }
-    else if (!get_invalid_characters($email))
+    else if (get_invalid_characters($email))
     {
         ?>
         <!DOCTYPE html>
