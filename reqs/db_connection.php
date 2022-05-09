@@ -22,7 +22,7 @@ function console_log($output, $with_script_tags = true) {
     echo $js_code; // use javascript to do a console_log
 }
 
-function generateKey($length = 16) {
+function generate_key($length = 16) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
@@ -37,7 +37,7 @@ function generateKey($length = 16) {
     {
         if ($key[0] == $randomString)
         {
-            $randomString = generateKey();
+            $randomString = generate_key();
             break;
         }
     }
@@ -114,5 +114,17 @@ function compress($source, $destination, $quality) {
     console_log(imagejpeg($image, $destination, $quality));
 
     return $destination;
+}
+
+function get_invalid_characters($str)
+{
+    $invalid_characters = [";", "/", "*", "+", "?", "$", "%", ",", "\\", "=", "^", "{", "}", "[", "]", ":", "~", "`", "<", ">", "|"];
+    foreach ($invalid_characters as $char)
+    {
+        if (str_contains($str, $char))
+        {
+            return false;
+        }
+    }
 }
 ?>
