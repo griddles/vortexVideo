@@ -4,147 +4,53 @@
     $username = $_POST['accUser']; // grab the data from the form on the previous page (login)
     $email = $_POST['accEmail'];
     $password = $_POST['accPass'];
-    if (get_invalid_characters($username))
+    if (get_invalid_characters($username) || get_invalid_characters($email) || str_contains($password, ";") || str_contains($password, " ")) // make sure the input doesnt contain any invalid characters, like ones that could be used for SQL injection
     {
         ?>
         <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device; initial=scale:1.0;">
-        <link rel="stylesheet" href="../reqs/globalStyle.css">
-        <link rel="icon" href="../images/vortexLogo.png">
-    </head>
-    <title>Vortex - About Us</title>
-    <body class="default">
-        <div class="sticky">
-            <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
-            <form class="searchform" method="post" action="index.php">
-                <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
-            </form>
-            <div class="accountbox">
-                <div class="account">
-                    <?php
-                    error_reporting(0);
-                    if ($_COOKIE["username"] == "")
-                    { ?>
-                    <a href="../login/"><button class="signin" id="signin">Sign In</button></a>
-                    <?php 
-                    }
-                    else
-                    { ?>
-                    <a href="../account/"><button class="signin" id="account">Account</button><a>
-                    <img class="pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="48px" height="48px">
-                    <?php
-                    }
-                    ?>
+        <html lang="en">
+            <head>
+                <meta name="viewport" content="width=device; initial=scale:1.0;">
+                <link rel="stylesheet" href="../reqs/globalStyle.css">
+                <link rel="icon" href="../images/vortexLogo.png">
+            </head>
+            <title>Vortex - About Us</title>
+            <body class="default">
+                <div class="sticky">
+                    <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
+                    <form class="searchform" method="post" action="index.php">
+                        <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
+                    </form>
+                    <div class="accountbox">
+                        <div class="account">
+                            <?php
+                            error_reporting(0);
+                            if ($_COOKIE["username"] == "")
+                            { ?>
+                            <a href="../login/"><button class="signin" id="signin">Sign In</button></a>
+                            <?php 
+                            }
+                            else
+                            { ?>
+                            <a href="../account/"><button class="signin" id="account">Account</button><a>
+                            <img class="pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="48px" height="48px">
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="navlink"><a href="../home/">Home</a></div>
-            <div class="navlink"><a href="../about/">About Us</a></div>
-        </div>
-        <div class="body">
-            <h2>Invalid Character in Username.</h2>
-        </div>
-    </body>
-</html>
-        <?php
-    }
-    else if (get_invalid_characters($email))
-    {
-        ?>
-        <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device; initial=scale:1.0;">
-        <link rel="stylesheet" href="../reqs/globalStyle.css">
-        <link rel="icon" href="../images/vortexLogo.png">
-    </head>
-    <title>Vortex - About Us</title>
-    <body class="default">
-        <div class="sticky">
-            <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
-            <form class="searchform" method="post" action="index.php">
-                <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
-            </form>
-            <div class="accountbox">
-                <div class="account">
-                    <?php
-                    error_reporting(0);
-                    if ($_COOKIE["username"] == "")
-                    { ?>
-                    <a href="../login/"><button class="signin" id="signin">Sign In</button></a>
-                    <?php 
-                    }
-                    else
-                    { ?>
-                    <a href="../account/"><button class="signin" id="account">Account</button><a>
-                    <img class="pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="48px" height="48px">
-                    <?php
-                    }
-                    ?>
+                <div class="sidebar">
+                    <div class="navlink"><a href="../home/">Home</a></div>
+                    <div class="navlink"><a href="../about/">About Us</a></div>
                 </div>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="navlink"><a href="../home/">Home</a></div>
-            <div class="navlink"><a href="../about/">About Us</a></div>
-        </div>
-        <div class="body">
-            <h2>Invalid Character in Email.</h2>
-        </div>
-    </body>
-</html>
-        <?php
-    }
-    else if (str_contains($password, ";"))
-    {
-        ?>
-        <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device; initial=scale:1.0;">
-        <link rel="stylesheet" href="../reqs/globalStyle.css">
-        <link rel="icon" href="../images/vortexLogo.png">
-    </head>
-    <title>Vortex - About Us</title>
-    <body class="default">
-        <div class="sticky">
-            <a href="../home/" title="Vortex.com" style="margin-left:16px"><img src="../images/vortexFullLogo.png" width="240px"></a>
-            <form class="searchform" method="post" action="index.php">
-                <input class="searchbar" autocomplete="off" placeholder="Search" name="searchbar" id="searchbar">
-            </form>
-            <div class="accountbox">
-                <div class="account">
-                    <?php
-                    error_reporting(0);
-                    if ($_COOKIE["username"] == "")
-                    { ?>
-                    <a href="../login/"><button class="signin" id="signin">Sign In</button></a>
-                    <?php 
-                    }
-                    else
-                    { ?>
-                    <a href="../account/"><button class="signin" id="account">Account</button><a>
-                    <img class="pfp" id="pfp" src="../images/maskdark.png" style="background-image:url('../images/accountpfps/<?php echo $_COOKIE["username"]; ?>.png')" width="48px" height="48px">
-                    <?php
-                    }
-                    ?>
+                <div class="body">
+                    <h2>Invalid characters detected.</h2>
                 </div>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="navlink"><a href="../home/">Home</a></div>
-            <div class="navlink"><a href="../about/">About Us</a></div>
-        </div>
-        <div class="body">
-            <h2>For security reasons, semicolons are not allowed in passwords.</h2>
-        </div>
-    </body>
-</html>
+            </body>
+        </html>
         <?php
-    }
+    } 
     else
     {
     create_account($username, $email, $password); // run the db_connection function to create an account

@@ -118,7 +118,7 @@ function compress($source, $destination, $quality) {
 
 function get_invalid_characters($str)
 {
-    $invalid_characters = [";", "/", "*", "+", "?", "$", "%", ",", "\\", "=", "^", "{", "}", "[", "]", ":", "~", "`", "<", ">", "|"];
+    $invalid_characters = [";", "/", "*", "+", "?", "$", "%", ",", "\\", "=", "^", "{", "}", "[", "]", ":", "~", "`", "<", ">", "|", " "];
     foreach ($invalid_characters as $char)
     {
         if (str_contains($str, $char))

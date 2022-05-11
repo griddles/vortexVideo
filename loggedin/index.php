@@ -4,6 +4,7 @@
     error_reporting(0);
     $username = $_POST['loginUser'];
     $password = $_POST['loginPass'];
+    
 
     console_log($username . $password);
     
