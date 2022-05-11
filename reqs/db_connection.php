@@ -55,7 +55,7 @@ function create_account($username, $email, $password)
 function video_database($title, $desc, $tags, $key)
 {
     $conn = OpenCon();
-    $username = $_COOKIE["username"];
+    $username = $_COOKIE["username"]; // i sure hope you cant do SQL injection in an INSERT function, because idk how to do this otherwise.
     $sql = "INSERT INTO `vortexvideos` (`title`, `creator`, `views`, `description`, `videokey`, `tags`) VALUES ('$title', '$username', 0, '$desc', '$key', '$tags')";
     mysqli_query($conn, $sql);
     CloseCon($conn);
