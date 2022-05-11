@@ -19,7 +19,7 @@ function console_log($output, $with_script_tags = true) {
     if ($with_script_tags) {
         $js_code = '<script>' . $js_code . '</script>';
     }
-    echo $js_code; // use javascript to do a console_log
+    echo $js_code; // use javascript to do a console_log (very useful)
 }
 
 function generate_key($length = 16) {
