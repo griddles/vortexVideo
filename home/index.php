@@ -11,7 +11,7 @@
         if (isset($_COOKIE['username']) && $_GET["logout"] == "true") // properly sign the user out (probably not the most secure way to do this but its just logging the user out what can go wrong)
         {
             unset($_COOKIE['username']);
-            setcookie('username', null, -1, '/'); 
+            setcookie('username', null, -1, '/');
         }
     ?>
     <title>Vortex - Home</title>
