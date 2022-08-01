@@ -5,7 +5,7 @@ function OpenCon()
     $dbuser = "vortexuser";
     $dbpass = "test1234";
     $db = "vortexvideos";
-    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+    $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\n". $conn -> error);
     return $conn; // make a connection to the database and return it
 }
 
