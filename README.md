@@ -9,10 +9,6 @@ Some of these include:
  - A much looser content guideline system that still blocks actually harmful content, not "guns with magazines of over 10 rounds" like Youtube   
  - A system in which all users are notified of changes at least a week before they release, and creators are given a vote on whether the change should be kept, modified, or discarded, both before and after the change is released. Obviously this wouldn't apply to some changes, like stuff having to do with the backend stuff or other very important changes.    
 
-obviously this is a super ambitious idea, as the website probably wont even be functional for another year or more, but if nobody even tries to compete with youtube, nobody will compete with youtube, and we dont want that.
-
-It's probably a bad idea to follow this repo unless you actually wanna help out developing it, since I commit stuff way too often and without making major changes sometimes, so you'll just get a bunch of garbage notifications.
-
 ---
 
 ### How to get involved
